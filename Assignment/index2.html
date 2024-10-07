@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .intro{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 100px;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+            height: 50vw;
+        }
+
+        header{
+            position: fixed;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #303030, #000);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo>span{
+            color: lightgrey;
+        }
+
+        .logo>img{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        .line{
+            position: fixed;
+            top: 100px;
+            left: 115px;
+            height: 0.7vw;
+            width: 90vw;
+            background: radial-gradient(circle at center, #383737, #242424, #353535 100%, #0a0a0a 100%);
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+
+        }
+
+        nav>ul{
+            display: flex;
+            list-style: none;
+        }
+
+        nav>ul>li>a{
+            text-decoration: none;
+            margin: 0 20px;
+            color: lightgrey;
+            font-weight: bold;
+        }
+
+        .social-icons > img{
+            width: 30px;
+            height: 30px;
+            margin-left: 15px;
+        }
+
+        .intro-text > h1 {
+            font-size: 50px;
+            font-family: 'Arial', sans-serif;
+            color: #3b82f6;
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+            width: 500px;
+        }
+
+        .intro-text > h2 {
+            font-size: 60px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .intro-text > h3 {
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+            margin: 10px 0;
+        }
+
+        .intro-text>p{
+            margin: 20px 0;
+        }
+
+        .intro .intro-text>button{
+            padding: 10px 20px;
+            border: none;
+            background-color: gray;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: rgba(153, 152, 153, 0.4) 5px 5px, rgba(109, 108, 108, 0.3) 10px 10px, rgba(68, 68, 68, 0.2) 10px 10px;
+        }
+
+        .intro .intro-text>button:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s;
+        }
+
+
+
+        .intro-images{
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px;
+        }
+
+        .intro-images .image{
+            margin: 0 50px;
+        }
+
+        .intro-images .image img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .intro-images .image:hover {
+            transform: scale(1.20);
+            transition: transform 0.5s;
+        }
+
+
+        body{
+            background: radial-gradient(circle at center, #383737, #242424, #353535 100%, #0a0a0a 100%);;
+            color: white;
+        }
+
+        .intro-text>button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #6b7280;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(48, 48, 48, 0.7)); /* Background similar to your previous style */
+            /*padding: 20px;*/
+        }
+
+        .intro-container {
+            max-width: 1000px;
+            background-color: #1a1a1a;
+            padding: 40px 70px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
+        .intro-container h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #94A7FF; /* Light blue for 'Lemme' */
+            margin-bottom: 0;
+        }
+
+        .intro-container h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e6e6e6; /* White color for 'Introduce Myself!!' */
+            display: flex;
+            align-items: center;
+        }
+
+        .intro-container h2 span {
+            font-size: 2.5rem;
+            margin-left: 10px; /* Adding space between the emoji */
+        }
+
+        .intro-container p {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            margin-top: 15px;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .intro-container {
+                padding: 20px;
+            }
+
+            .intro-container h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro-container h2 {
+                font-size: 2rem;
+            }
+
+            .intro-container p {
+                font-size: 1rem;
+            }
+        }
+
+        .projects-section {
+            padding: 50px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .projects-title {
+            font-size: 2.5rem;
+            color: #98A1FF; /* Light blue color */
+            margin-bottom: 10px;
+        }
+
+        .projects-intro {
+            font-size: 1.2rem;
+            color: #B0B3C5; /* Subtle gray color */
+            margin-bottom: 40px;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: rgba(42, 42, 42, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        /*position relative karannpa response krddi awl ynwa*/
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg">
+        <span>Erandi Gamage</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <img src="/assests/(3).png" alt="fbLogo">
+        <img src="" alt="instaLogo">
+        <img src="" alt="GHLogo">
+        <img src="" alt="LILogo">
+    </div>
+
+</header>
+
+<section class="intro">
+    <div class="intro-text">
+        <h1> Hii, It's Me</h1>
+        <h2> Erandi Gamage </h2>
+        <h3> Full Stack Developer</h3>
+        <p>
+            A passionate software engineering student,
+            dedicated to crafting innovative solutions and honing my skills.
+        </p>
+        <button> Download CV </button>
+    </div>
+    <section class="intro-images">
+        <div class="image">
+            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg">
+        </div>
+        <div class="image">
+            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg">
+        </div>
+        <div class="image">
+            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg">
+        </div>
+
+        <div class="line"></div>
+
+    </section>
+</section>
+
+<div class="intro-section">
+    <div class="intro-container">
+        <h1>Lemme</h1>
+        <h2>Introduce MySelf!! <span>😉</span></h2>
+        <p>Um proud to share my academic journey, starting with passing the scholarship exam. I performed well in my Ordinary Level (O/L-2018) and Advanced Level (A/L-2021) examination also.</p>
+        <p>After completing my A/Ls, I enrolled in ESOFT Metro Campus, where I excelled and earned an IT diploma with the best performance.</p>
+        <p>Currently, I am furthering my education as an undergraduate student in software engineering at the Institute of Java and Software Engineering (IJSE).</p>
+        <p>In my free time, I enjoy listening to music, drawing arts, and watching movies and TV series. My family consists of my mother, father, and myself.</p>
+    </div>
+</div>
+
+<section class="projects-section">
+    <h2 class="projects-title">My Projects</h2>
+    <p class="projects-intro">Check Out My Project Below to See What I’ve Been Working On!</p>
+
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="/assests/sVtbQYBw.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">AandCSuperMarket</h3>
+                <p class="project-description">Step into the Digital Aisles: Discover
+                    and explore my latest web project, and experience a fresh take on innovation!</p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/assests/hgfhjkhk.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+            <div class="project-content">
+                <h3 class="project-title">Connect 4 Games</h3>
+                <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                    and Change Yourself with Fun and Exciting Matches</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<!--.intro-images{-->
+<!--    align-items: center;-->
+<!--    display: grid;-->
+<!--    grid-template-columns: repeat(3, 1fr);-->
+<!--    gap: 20px;-->
+<!--    border-image-width: 100px;-->
+<!--    height: 50px;-->
+<!--    border-radius: 10px;-->
+<!--    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);-->
+<!--}-->
+
+<!--.intro-images { -->
+<!--display: flex;-->
+<!--justify-content: space-around; -->
+<!--padding: 50px 0; -->
+<!--}-->
+
+<!--.intro-images { -->
+<!--display: grid; -->
+<!--grid-template-columns: repeat(3, 1fr); !* Create 3 equal columns for images *!-->
+<!--gap: 20px; !* Space between images *!-->
+<!--}-->
+
+<!--.intro-images .image> img{ -->
+<!--border-left: 10px solid gray;display: flex;-->
+<!--justify-content: space-around; -->
+<!--padding: 50px 0; -->
+<!--border-bottom-left-radius: 20px; -->
+<!--border-top-left-radius: 20px; -->
+<!--border-bottom: 2px solid lightgrey; -->
+<!--border-right: 2px solid lightgrey; -->
+<!--border-top: 2px solid lightgrey; -->
+<!--}-->
+
+</html>
+
+
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1d1d1d;
+        color: white;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 100px;
+        background: linear-gradient(to right, #303030, #000);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+        color: #d3d3d3;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+
+    /* Introduction Section */
+    .intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 100px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    }
+
+    .intro-text {
+        max-width: 500px;
+    }
+
+    .intro-text h1 {
+        font-size: 50px;
+        color: #3b82f6;
+        margin-bottom: 10px;
+    }
+
+    .intro-text h2 {
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .intro-text h3 {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    .intro-text p {
+        margin: 20px 0;
+    }
+
+    .intro-text button {
+        padding: 10px 30px;
+        border: none;
+        background-color: #6b7280;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s;
+    }
+
+    .intro-text button:hover {
+        background-color: #4b5563;
+    }
+
+    .intro-image img {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Gallery Section */
+    .gallery {
+        display: flex;
+        justify-content: center;
+        padding: 50px 100px;
+    }
+
+    .gallery .image {
+        margin: 0 20px;
+    }
+
+    .gallery .image img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    }
+</style>
+
+<body>  
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Erandi Gamage">
+        <span>Erandi Gamage</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+    </div>
+</header>
+
+<!-- Introduction Section -->
+<section class="intro">
+    <div class="intro-text">
+        <h1>Hii, It's Me</h1>
+        <h2>Erandi Gamage</h2>
+        <h3>Full Stack Developer</h3>
+        <p>A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
+        <button>Download CV</button>
+    </div>
+    <div class="intro-image">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Erandi Gamage Image">
+    </div>
+</section>
+
+<!-- Image Gallery Section -->
+<section class="gallery">
+    <div class="image">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Erandi Gamage Image">
+    </div>
+    <div class="image">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Erandi Gamage Image">
+    </div>
+    <div class="image">
+        <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Erandi Gamage Image">
+    </div>
+</section>
+</body>
+</html>
