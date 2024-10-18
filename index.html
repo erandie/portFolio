@@ -9,11 +9,11 @@
 
     <style>
 
-        /* Reset some default browser styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            /*overflow: hidden;*/
 
         }
 
@@ -21,11 +21,10 @@
             font-family: 'Arial', sans-serif;
             background: radial-gradient(circle at center, #383737, #242424, #353535 100%, #0a0a0a 100%);
             color: white;
-            overflow: auto;
         }
 
-        /* Navigation Styles */
         header {
+            height: 100px;
             position: fixed;
             top: 0;
             width: 100%;
@@ -35,6 +34,7 @@
             padding: 10px 20px;
             background: linear-gradient(to right, #303030, #000);
             z-index: 100;
+            overflow: hidden;
         }
 
         nav {
@@ -54,6 +54,7 @@
             height: 50px;
             border-radius: 50%;
             margin-right: 10px;
+            margin-left: 10px;
         }
 
         .logo span {
@@ -84,7 +85,6 @@
             cursor: pointer;
         }
 
-        /* Responsive Menu for Mobile */
         #menuToggle {
             display: none;
         }
@@ -114,7 +114,7 @@
             }
         }
 
-        /* Intro Section */
+/*__________________________Intro Section_____________________________*/
         .intro {
             display: flex;
             justify-content: space-between;
@@ -122,6 +122,7 @@
             padding: 200px 100px;
             /*background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));*/
             height: auto;
+
         }
 
         .intro-text {
@@ -157,20 +158,22 @@
             cursor: pointer;
             border-radius: 5px;
             box-shadow: 5px 5px rgba(153, 152, 153, 0.4);
+            margin-top: 10px;
         }
 
         .intro-images {
             display: flex;
             justify-content: space-around;
-            padding: 10px 10px;
+            padding-top: 50px;
+            margin-right: 230px;
         }
 
         .intro-images .image {
-            margin: 0 50px;
+            margin: 0 25px;
         }
 
         .intro-images .image img {
-            width: 300px;
+            width: 280px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
@@ -202,6 +205,24 @@
             }
         }
 
+        @media  screen and (max-width: 1024px) {
+            .intro{
+                width: 2000px;
+                padding-left: 80px;
+                padding-top: 100px;
+                background-color: #181818;
+            }
+
+            .intro-images {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                display: flex;
+                align-items: center;
+                margin-left: 50px;
+            }
+
+        }
+
         @media (max-width: 768px) {
 
             .intro {
@@ -210,6 +231,10 @@
                 padding-top: 100px;
                 padding-left: 50px;
                 padding-bottom: 20px;
+            }
+
+            .intro-text{
+                padding-top: 50px;
             }
 
             #home{
@@ -228,36 +253,40 @@
             }
 
             .intro-images {
-                padding: 50px;
-                display: flex;
-                align-items: center;
+                /*padding-top: 50px;*/
+                /*padding-bottom: 50px;*/
+                /*display: flex;*/
+                /*align-items: center;*/
+                margin-left: 0;
             }
 
 
 
             .intro-images .image {
-                width: 250px;
-                margin: 10px 0;
+
+                /*width: 250px;*/
+                /*margin: 10px 0;*/
             }
 
             .intro-images .image:nth-child(1){
-                padding-left: -10px;
-                padding-right: 100px ;
+                /*padding-left: -1000px;*/
+                padding-right: 1000px ;
             }
 
             .intro-images .image:nth-child(3){
-                padding-left: 100px;
-                margin-right: 100px;
+                display: none;
+                /*padding-left: 20px;*/
+
             }
 
             .intro-images .image:nth-child(2){
-                display: none;
+
             }
 
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #444;
+                background-color: rgba(0, 0, 0, 0.6);
                 position: absolute;
                 top: 60px;
                 right: 0;
@@ -306,6 +335,10 @@
                 padding-bottom: 20px;
             }
 
+            .intro-text{
+                width: 120%;
+            }
+
             .intro-text h1, .intro-text h2 {
                 font-size: 40px;
             }
@@ -315,18 +348,18 @@
                 color: #c63636;
             }
 
-            .intro-images {
-                flex-direction: column;
-                align-items: center;
-            }
+            /*.intro-images {*/
+            /*    flex-direction: column;*/
+            /*    align-items: center;*/
+            /*}*/
 
             .intro-images .image {
-                margin: 10px 0;
+                margin-right: 150px;
+                /*margin: 10px 0;*/
             }
 
             .intro-images .image:nth-child(3){
                 display: none;
-                width: 200px;
             }
 
         }
@@ -355,7 +388,7 @@
             }
 
             .intro-images .image {
-                margin: 10px 0;
+                margin-right: 180px;
             }
 
             .intro-images .image:nth-child(3){
@@ -367,7 +400,7 @@
 
         @media (max-width: 320px) {
             .intro {
-                background-color: #fe0026;
+                background-color: #350008;
                 flex-direction: column;
                 padding-top: 100px;
                 padding-left: 50px;
@@ -389,7 +422,7 @@
             }
 
             .intro-images .image {
-                margin: 10px 0;
+                margin-right: 240px;
             }
 
             .intro-images .image:nth-child(3){
@@ -411,7 +444,7 @@
             justify-content: center;
             align-items: center;
             height: 90vh;
-            background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(48, 48, 48, 0.7)); /* Background similar to your previous style */
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(48, 48, 48, 0.7));
             /*padding: 20px;*/
         }
 
@@ -822,7 +855,13 @@
         }
 
         @media (max-width: 768px) {
+            .projects-section{
+                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            }
 
+            .project-container{
+                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            }
         }
 
         @media (max-width: 425px) {
@@ -869,7 +908,7 @@
         .service-cards{
             display: flex;
             align-items: center;
-            margin-left: 100px;
+            /*margin-left: 100px;*/
         }
 
         .first-card{
@@ -886,6 +925,7 @@
         .service-btn > button{
             padding: 10px 20px;
             font-size: 16px;
+            margin: 10px;
             cursor: pointer;
             color: white;
             background-color: gray;
@@ -1014,23 +1054,25 @@
 
             .service-container{
                 background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-                width: 70%;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                align-content: center;
-                align-self: center;
+                /*width: 70%;*/
+                /*align-items: center;*/
+                /*text-align: center;*/
+                /*justify-content: center;*/
+                /*align-content: center;*/
+                /*align-self: center;*/
+                place-items: center;
             }
 
             .service-cards{
-                margin-left: 70px;
+                /*margin-left: 30px;*/
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .first-card{
                 background-color: #350008;
-                width: 23vw;
+                width: 25vw;
+                height: 25vw;
             }
 
             .service-para{
@@ -1047,7 +1089,36 @@
                 align-items: center;
                 display: flex;
                 flex-direction: column;
+                place-items: center;
+                margin-top: -100px;
 
+            }
+
+            .service-cards{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
+
+            .first-card{
+                border-radius: 20px;
+                height: 80px;
+                width: 60vw;
+                background-color: #350008FF;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+                display: flex;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .uxDesign{
+                margin-top: 30px;
             }
 
             .service-title {
@@ -1055,7 +1126,7 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                margin: 0;
+                margin: 10px;
                 width: 100%;
             }
 
@@ -1063,7 +1134,7 @@
                 width: 60vw;
                 font-size: 12px;
                 text-align: center;
-                margin: 0 auto;
+                margin-top: 15px;
             }
 
             .boxIcon{
@@ -1077,6 +1148,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 100px;
+                place-items: center;
             }
 
 
@@ -1086,10 +1158,10 @@
            }
 
             .first-card{
-                margin-left: -30px;
+
                 border-radius: 20px;
                 height: 80px;
-                width: 60vw;
+                width: 50vw;
                 background-color: #350008FF;
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
                 display: flex;
@@ -1134,6 +1206,17 @@
                 margin-left: 125px;
                 text-align: center;
             }
+
+            .boxIcon{
+                width: 28vw;
+                aspect-ratio: 1/1;
+            }
+
+            .uxDesign{
+                margin-top: -5px;
+                font-size: small;
+            }
+
         }
 
         @media (max-width: 320px) {
@@ -1429,6 +1512,11 @@
                 width: 350px;
             }
 
+            .myAssignment p{
+                text-align: center;
+                width: 70%;
+                font-size: small;
+            }
 
 
         }
@@ -1511,7 +1599,7 @@
             }
 
             .myAssignment p{
-                margin: 10px 5px 5px -25px;
+                margin: 10px 5px 5px -35px;
                 text-align: center;
                 width: 60%;
                 font-size: x-small;
@@ -1808,6 +1896,18 @@
             }
         }
 
+        .developed-by{
+
+            justify-content: right;
+            text-align: right;
+            font-size: 20px;
+            border-top: 5px solid #8e8c8c;
+            border-bottom: 5px solid #626161;
+            height: 100px;
+            width: 100%;
+            background-color: #232323;
+        }
+
 /*__________________________mediaQuery____________________________*/
 
         /* Mobile Small */
@@ -1971,14 +2071,14 @@
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon">&#9776;</label>
         <ul class="nav-links">
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="" onclick="showPage('home')">Home</a></li>
             <li><a href="#" onclick="showPage('about-me')">About Me</a></li>
             <li><a href="#" onclick="showPage('Languages')">Languages</a></li>
             <li><a href="#" onclick="showPage('projects')">Projects</a></li>
             <li><a href="#" onclick="showPage('services')">Services</a></li>
             <li><a href="#" onclick="showPage('assignments')">Assignments</a></li>
             <li><a href="#" onclick="showPage('getInTouch')">getInTouch</a></li>
-            <li><a href="#" onclick="showPage('footer')">footer</a></li>
+            <li><a href="" onclick="showPage('footer')">footer</a></li>
         </ul>
     </nav>
 </header>
@@ -2369,10 +2469,10 @@
         <div class="white-line"></div>
 
         <div class="social-media-icons">
-            <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/031/737/184/original/facebook-icons-facebook-social-media-logo-free-png.png" height="80px" width="80px" alt="Facebook"></a>
-            <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/031/737/184/original/facebook-icons-facebook-social-media-logo-free-png.png" height="80px" width="80px" alt="Instagram"></a>
-            <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/031/737/184/original/facebook-icons-facebook-social-media-logo-free-png.png" height="80px" width="80px" alt="GitHub"></a>
-            <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/031/737/184/original/facebook-icons-facebook-social-media-logo-free-png.png" height="80px" width="80px" alt="LinkedIn"></a>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABcElEQVRIS7WVgXHCMAxF4wkYoXQC6ASwAWUCYAKSCWgnaJigZQLSDRiBbhA2oBOkXz07JyeyrfQa3/ngbElP/tIpJht5mZHjZ0lA0zTPSGKFPbebcrraXRljPmNJBgE28Bucp4lX1rgvAKokOxGA4CWM9wPlKwEpuj49wB+Du7hHQHIO8QBWlnMk8xvuci4HfF5wdmA+a37fBZCeDwHANxUZzmTTLgFQw+bRGbQARfYnOG6dI+yX+L/Apl/afLWv4IAPWGwi8rwCQHJkQ5LhAOrtmRJAIK571+2KZJ7okAOaSHC64i9IATIAfmMnAc4wBIdcF1sLz0QC1LDodZACcIffpJPAF/xotHgvEIusAEjSth3HJdoC+P5PRd4hMUrYn6bQU5TJQrVFviH41CU6ZFRoAeFRQdTIsNMA4sPOPQsQqeApgDdKRIl4ge04oO+Ca90QoDdheRzNJ5O6a4l9cZ0BeO8s1H1JQKRtVVejA34AFeC1GRw98aMAAAAASUVORK5CYII="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABaklEQVRIS8VVi3HCMAyNJygbkG5ANoAJ2k7QMAFsAGwAE0AmaDcoG5RuABvABOE9n+xzTJxvc/jOF86S3tOTZKOigZcaGD96DkGe51Mo+8TmN65ReYb9iJ0ppfgtrAcFAE/hse9YujlIDm5sgUAy/+kIbsJmrhKfgOwsTdN1kzK+47uSIJaKVdDLJ2A9xwH0DOcnsU0kkRPAEignwZfYzjh7DRHkJeB/OEsRZMC1C0BJQsWMibFHFhTObQgSOFMZS5BKIIE3AvzrJwX8xgS6nsh2C5CFB7SDbQkbyQp9a0OwgfMaIFeAvHgEutawrUWdNf8XwQVAcV8CU6KHLNkDUfeN32+uujYKGJdwgiRT22QB5yT1ajIJOEEfgTHlrbfjaVRUKSBY6KKxFO5F4+UqW7o3lsz1KBu5AEjVceVTMUXkcI8d0xr0uTa65dnmxFBRqCfG/YIfR+yD+0yX9qBDvWtDnvOfXJtWC4c7XnSkGYog9BEAAAAASUVORK5CYII="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABxklEQVRIS7VVgVHDMAxMJgAmIEwATEA7ATABZQLoBJQJKBvQCQoTECag3SDdoEwQ/qlkFEfUCXfxnc85W/rXy5aSZwOPfGD8LElQ1/UVgrjEPJPJmFYyyzzPF/uC/JNAgJ/gXCRUVjifgujVs3MJAD6D8UPP9M1BMo19WgT/BFfcZ5DcW5IGAcBHOHwXgzesVDLBvJO9taynsjL/L2JzI3vXNl0xAfN5LIaPMCRBBuJDfG9tZHYvUl3B9kRtA4Fc6tKALGDI6JPDSestfKns95nCiBsqk2djGJVJ9J1CPuFPLzirgGAXYrQGOJ06D5BY/xX8z2MFzPGBIH7AYNQZfafCEmTw/wneKqgN4CAENoItAjjqqcBmYAP/IlYQXzLLf96FBOlhcbGt6Agv0KaIOdci+5L7mGFldTZqQFFYC/jmy4sDaT9TOsGhEuAxVkalz5ZVPVEiAaZivjqS2BHS00iREKgKRsxnpiChqk30PLN1o0eN+vGanebT7Y6GgOmLO+7+ZmeclYQ/FqrhpTHiMJz20FLZSlEEwHQRlM3PS5Eq2OCc91Naf/3u8sskEeuCaqwCtpIC++6frDOBF1WfvaSCPmCe7TdexMUZ6oUAawAAAABJRU5ErkJggg=="/>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA+klEQVRIS+2V4Q2CMBCF6QTqBjqBOoG6gSO4iTCJIxg3kA10AhlBJ6jvNW1TzkSTq+UXTUhD6b3v+jgOUxUeprB+9QGw1k4JNcY8/wHvASBeQ/TohRtAeJ81IgDicyg9hNos9yTDAZh5UYuCNaVf8pYH8bAX/L/5k60wT9J1n8gSa4zhvjv2d7IiZBUFce5rEcBgWnfFtPHBLWZW1xmXK+lk1Ihp0gUNgFlSWIoH3R0gTMgNDUC6IO8vAOxzAVEE9h0gdkooHQCLXMA6FACFAGFbCUXANhOdUVmUCngAPQ9FMAJcK5fWjhb1WoXeol+fqOb58D99TZbfYt7Nj8YZoday5wAAAABJRU5ErkJggg=="/>
         </div>
 
         <div class="white-line-02"></div>
@@ -2380,8 +2480,12 @@
 
     <div class="footer-body">
         <div class="contact">
+
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB20lEQVRIS8WV4VECMRCFuQqECoQKpAOhA6zAowKlArACtQKxAumAswKwAulArOB8X2bDhJDc+YchMzt3l7zdt283yRWdM4/izPE7lyeo63oklfeyoRmit2bvRVFUTVXIKlDgvhzfZBAwPmU+GGTMX9ncTESQnowkgYITYC1j/UXOi5SzcCXrslp2l1JzQiCnrsDfsl/ZJJeZJzQ8yq5l4xifIliZ/BFgC9DV+y6lgjnDsL4RbhzijgisNBsBniiL9YHvvb4HOQIjoVz0DBUociMmoJ4Psp5AexE86v3ZsFPNLVtI9lpfCQdZksAxCzCyrEICmkj5skMJkcBtqDZWsBNgK8DECPp60nBK1GsKbviFnnNhD3EbCSIVS/lNWxS0EhyVyAcz6ZxmSjCToYyGUrJX+mXJ8D3UN+tu5Jo8iLelSPwGIBjmg7gdZwStTcaJmh+cwpLYvQTRjc1zGP15KU1VfptaFpWTZjspJPDvdj5Ihg3Bduad8/IV+6VOMvcKdWWLtg47nPSDg+jUhE5xD9ieHzIa+YODbGeErpHhsIM4R3AquKtE5OAbmcq8MjKI/HUNjmu8zN1VMQHyyJhgFXKtvpTL/3D4BxAULNcC2Oy4/C+zKbv/rJ1dwR91++cZcR88EgAAAABJRU5ErkJggg=="/>
             +94 761940 278 <br>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABt0lEQVRIS9WV4VHDMAxGmwmACWgngE5AOgEwAXQCYALoBMAEpBO0nYAwAWWDjNAN4Hs5JacYOxd61x/4zkcjS3qSLJlsdOCVHdj/aC/At5YC29peZ1m2SQUaBcj+RQan2nMZ70JjA3hxpY9r6QLtrA5Ahsc6XWnnplXKaBaLTrrnpndvwRDIg/QLrx8CiOAscFjIaN53V5bxnXSAzHwmIYDaxlYHIoc4+tQmwwUGDlJJNmmcDAWgT/rcDc58IFvJpyavrFzcxxpZCCglu0hksZHRVXMmBr+frKQ1XDLu41l7qe/bGKCQ8CYC+JIsDzvKIDTFh85yu3hK12YVZkBUGPgVde4yoVw7AU58+fRd+461KXU8coSJdJHttX4NmtIMy7QQgFrvtWKAMTV0WdCS0zALG8o3ndGqryl66qkg4kdnBJDWq0tlzt/1k2lmJYcx+djJCX186SBkwhwstWmExnmjEoX0AXiXSu3w6ei7C/TJtH0ge59rKwWZpIYvBmuHjMNB/w8E4k6YUt++qUw6XTcIYBc71l9ADGMKVE+0Jw8GNEZWNiA4AtqULzrxfwb03XDs7P8DfgDiNLgZh7CRGAAAAABJRU5ErkJggg=="/>
             +94 761940 278 <br>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABIklEQVRIS+1T2xGCMBAkFagdWIIdaAdiBWIHWIFQgVqB2IF2oB1YgiVgBXE3E5iAgfCQP24mk5DL7ub2gvAGDjEwvzcKOB3OLZJSBjh9wUgxIiHE2Yk2Dmj8UW/tgU+4NgVIPDEwN6x3OMj9ygDxFEkS84JZpMDNygLSwvLG3gaHXzYFkC901ZwLAYy6vFmBTSADhWXLDEtYwU+0FSCBskwzsVd+jXNeFwHy0TLGvI5cWdPSIhdfJ4vuQK0wzJdlE/pg84GxNpNNKogBOGnvlxUlPHUvQsyH1gK4RUQQXgznAgG+47p8owoyAi1Cu/iSGD5ytEWF7QKtBTSRevPlv/tvAhV9+F8FfQUSEGwNkryJVcQ1PbjCxkDZ6QL3zY8CTge/PFaMGQhxj60AAAAASUVORK5CYII="/>
             hansierandi7@gmail.com
         </div>
 
@@ -2405,7 +2509,13 @@
             Padiliyaya, <br> Rabarwatte,<br> Tissamaharamaya.
         </div>
     </div>
+    <br>
+    <br>
+
+
 </footer>
+
+<div class="developed-by"> Developed By Hansie </div>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
