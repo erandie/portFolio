@@ -135,13 +135,14 @@
             text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
         }
 
-        .intro-text h2 {
+        #typing {
+            color: #3b82f6;
             font-size: 60px;
             font-weight: bold;
         }
 
-        .intro-text h3 {
-            font-size: 30px;
+        #full-stack-dev {
+            font-size: 45px;
             margin: 10px 0;
         }
 
@@ -159,6 +160,12 @@
             border-radius: 5px;
             box-shadow: 5px 5px rgba(153, 152, 153, 0.4);
             margin-top: 10px;
+            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+        }
+
+        .cv-btn:hover{
+            transform: scale(1.15);
+            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
         }
 
         .intro-images {
@@ -166,9 +173,17 @@
             justify-content: space-around;
             padding-top: 50px;
             margin-right: 230px;
+
+        }
+
+        .image:hover {
+            transform: scale(1.15); /* Scale effect on hover */
+            box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;
         }
 
         .intro-images .image {
+            border-radius: 10px;
+            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
             margin: 0 25px;
         }
 
@@ -455,7 +470,13 @@
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             color: white;
+            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+        }
 
+
+        .intro-container:hover{
+            transform: scale(1.1);
+            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
         }
 
         .intro-container h1 {
@@ -474,12 +495,12 @@
         }
 
         .intro-container h2 span {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-left: 10px;
         }
 
         .intro-container p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             line-height: 1.7;
             margin-top: 15px;
             color: #cccccc;
@@ -643,6 +664,13 @@
             margin: 40px;
             display: flex;
             flex-direction: column;
+            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+        }
+
+
+        .languages-container:hover{
+            transform: scale(1.05);
+            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
         }
 
         .header {
@@ -696,6 +724,17 @@
         .ending{
             align-self: center;
             width: 80%;
+        }
+
+        .lng-img:hover {
+            transform: scale(1.5); /* Scale effect on hover */
+
+        }
+
+
+
+        .lng-img {
+            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
         }
 
         @media screen and (min-width: 1440px) {
@@ -779,7 +818,14 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             color: white;
             margin: 40px;
+            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
         }
+
+
+        /*.projects-container:hover{*/
+        /*    transform: scale(1.1);*/
+        /*    !*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*!*/
+        /*}*/
 
         .projects-title {
             font-size: 2.5rem;
@@ -919,8 +965,13 @@
             background-color: #2e2e2e;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             text-align: center;
+            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
         }
 
+        .first-card:hover {
+            transform: scale(1.08);
+
+        }
 
         .service-btn > button{
             padding: 10px 20px;
@@ -952,6 +1003,7 @@
             display: flex;
             justify-content: flex-start;
             margin: 20px;
+            font-size: larger;
         }
 
         .service-para{
@@ -1325,7 +1377,7 @@
         }
 
         .card:hover {
-            transform: scale(1.02); /* Apply scale effect on hover */
+            transform: scale(1.02);
         }
 
         a{
@@ -1337,7 +1389,6 @@
             height: 13vw;
             border-radius: 10px;
         }
-
 
         .modal {
             display: none;
@@ -1369,8 +1420,8 @@
 
         .modal-content > .close-btn {
             position: fixed;
-            top: 150px;
-            right: 190px;
+            top: 120px;
+            right: 220px;
             font-size: 24px;
             cursor: pointer;
 
@@ -1401,14 +1452,14 @@
             border-radius: 10px;
         }
 
-        .modal-content::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
+        /*.modal-content::-webkit-scrollbar-thumb {*/
+        /*    background: #888;*/
+        /*    border-radius: 4px;*/
+        /*}*/
 
-        .modal-content::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+        /*.modal-content::-webkit-scrollbar-thumb:hover {*/
+        /*    background: #555;*/
+        /*}*/
 
         @media screen and (min-width: 1440px) {
             .assignment-container{
@@ -2073,12 +2124,12 @@
         <ul class="nav-links">
             <li><a href="" onclick="showPage('home')">Home</a></li>
             <li><a href="#" onclick="showPage('about-me')">About Me</a></li>
-            <li><a href="#" onclick="showPage('Languages')">Languages</a></li>
+<!--            <li><a href="#" onclick="showPage('Languages')">Languages</a></li>-->
             <li><a href="#" onclick="showPage('projects')">Projects</a></li>
-            <li><a href="#" onclick="showPage('services')">Services</a></li>
+<!--            <li><a href="#" onclick="showPage('services')">Services</a></li>-->
             <li><a href="#" onclick="showPage('assignments')">Assignments</a></li>
-            <li><a href="#" onclick="showPage('getInTouch')">getInTouch</a></li>
-            <li><a href="" onclick="showPage('footer')">footer</a></li>
+            <li><a href="#" onclick="showPage('getInTouch')">Contact Us</a></li>
+<!--            <li><a href="" onclick="showPage('footer')">footer</a></li>-->
         </ul>
     </nav>
 </header>
@@ -2086,21 +2137,23 @@
 
 <section id="home" class="intro content-section" >
     <div class="intro-text">
-        <h1 class="hi-its-me">Hi, It's Me</h1>
-        <h2 class="erandi-gamage">Erandi Gamage</h2>
-        <h3 class="full-stack-dev">Full Stack Developer</h3>
+<!--        <h1 id="typing"></h1>-->
+
+<!--        <h1 class="hi-its-me">Hi, It's Me</h1>-->
+        <h1 id="typing" class="erandi-gamage"></h1>
+        <h2 class="full-stack-dev" id="full-stack-dev"></h2>
         <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
         <button class="cv-btn">Download CV</button>
     </div>
     <section class="intro-images">
         <div class="image">
-            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Profile Picture" class="profile-image">
+            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
         </div>
         <div class="image">
-            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Profile Picture" class="profile-image">
+            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
         </div>
         <div class="image">
-            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Profile Picture" class="profile-image">
+            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
         </div>
     </section>
 </section>
@@ -2109,7 +2162,7 @@
 <div class="intro-section content-section">
     <div class="intro-container">
 <!--    <div class="intro-container animate__animated animate__backInRight">-->
-        <h1>Lemme</h1>
+        <h1 id="lemme"></h1>
         <h2>Introduce MySelf!! <span>😉</span></h2>
         <p>Um proud to share my academic journey, starting with passing the scholarship exam. I performed well in my Ordinary Level (O/L-2018) and Advanced Level (A/L-2021) examination also.</p>
         <p>After completing my A/Ls, I enrolled in ESOFT Metro Campus, where I excelled and earned an IT diploma with the best performance.</p>
@@ -2180,26 +2233,26 @@
             <div class="images">
 
                 <div class="first-one">
-                    <img src="/assests/gitHub.png" alt="gh" class="gh-images" height="60px" width="100px">
+                    <img src="/assests/gitHub.png" alt="gh" class="gh-images lng-img" height="60px" width="100px">
                 </div>
                 <br> <br>
 
                 <div class="second-2">
-                    <img src="/assests/ps.jpg" alt="PS" class="PS-images" height="60px" width="60px">
-                    <img src="/assests/sql.png" alt="SQL" class="SQL-images" height="60px" width="100px">
+                    <img src="/assests/ps.jpg" alt="PS" class="PS-images lng-img" height="60px" width="60px">
+                    <img src="/assests/sql.png" alt="SQL" class="SQL-images lng-img" height="60px" width="100px">
                 </div> <br> <br>
 
                 <div class="third-3">
-                    <img src="/assests/Python.png" alt="python" class="python-images" height="60px" width="100px">
-                    <img src="/assests/C%23.png" alt="C#" class="C#-images" height="60px" width="60px">
-                    <img src="/assests/figma.png" alt="Figma" class="Figma-images" height="60px" width="60px">
+                    <img src="/assests/Python.png" alt="python" class="python-images lng-img" height="60px" width="100px">
+                    <img src="/assests/C%23.png" alt="C#" class="C#-images lng-img" height="60px" width="60px">
+                    <img src="/assests/figma.png" alt="Figma" class="Figma-images lng-img" height="60px" width="60px">
                 </div> <br> <br>
 
                 <div class="last-4">
-                    <img src="Assignment/assests/java.png" alt="Java" class="Java-images" height="60px" width="100px">
-                    <img src="Assignment/assests/css.png" alt="CSS" class="CSS-images" height="60px" width="60px">
-                    <img src="/assests/html.svg" alt="html" class="html-images" height="60px" width="60px">
-                    <img src="/assests/php.png" alt="php" class="php-images" height="60px" width="80px">
+                    <img src="Assignment/assests/java.png" alt="Java" class="Java-images lng-img" height="60px" width="100px">
+                    <img src="Assignment/assests/css.png" alt="CSS" class="CSS-images lng-img" height="60px" width="60px">
+                    <img src="/assests/html.svg" alt="html" class="html-images lng-img" height="60px" width="60px">
+                    <img src="/assests/php.png" alt="php" class="php-images lng-img" height="60px" width="80px">
                 </div> <br> <br>
 
 
@@ -2268,7 +2321,7 @@
         <div class="service-header">
             <div class="service-title">
                 <div class="service-topic-line"></div>
-                <h2>My Services</h2>
+                <h2 id="My-Services"></h2>
             </div>
 
             <p class="service-para"> Lorem ipsum dolor sit amet,
@@ -2323,6 +2376,7 @@
                 showcase my hard work and creativity</p>
         </div>
 
+
         <div class="card" id="assignmentCard">
             <img src="/assests/assignmentImage2.jpg" alt="Assignment Image" height="200px" width="300px" class="assignment-images">
             <img src="/assests/assignmentImage2.jpg" alt="Assignment Image" height="200px" width="300px" class="assignment-images">
@@ -2339,6 +2393,7 @@
                 <h2>All Assignments</h2>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolor dolore, doloribus eaque esse ex harum impedit iste libero modi nostrum quo rem reprehenderit sit voluptatem! Dolores numquam quas ullam.</p>
 
+
                 <!-- Scrollable Assignment List -->
                 <div class="assignment-list">
                     <div class="projects-container">
@@ -2348,7 +2403,7 @@
 
                                 <img src="/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
                                 <div class="project-content">
-                                    <h3 class="project-title">AandCSuperMarket</h3>
+                                    <h3 class="project-title">AandC SuperMarket</h3>
                                     <p class="project-description">Step into the Digital Aisles: Discover
                                         and explore my latest web project, and experience a fresh take on innovation!</p>
                                 </div>
@@ -2542,6 +2597,86 @@
             modal.style.display = "none"; // Hide modal
         }
     });
+
+    const text = "Erandi Gamage";
+    let index = 0;
+    const speed = 150;
+
+    function typeWriter(){
+        if ( index < text.length){
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+        } else {
+            setTimeout( ()=>{
+                document.getElementById("typing").innerHTML = "";
+                index = 0;
+                typeWriter();
+            }, 1000);
+        }
+    }
+
+    typeWriter();
+
+    const text2 = "Full Stack Developer";
+    let index2 = 0;
+    const speed2 = 150;
+
+    function typeWriter2(){
+        if (index2 < text2.length) {
+            document.getElementById("full-stack-dev").innerHTML += text2.charAt(index2);
+            index2++;
+            setTimeout(typeWriter2, speed2);
+        } else {
+            setTimeout( ()=> {
+                document.getElementById("full-stack-dev").innerHTML = "";
+                index2 = 0;
+                typeWriter2();
+            }, 1000);
+        }
+    }
+
+    typeWriter2();
+
+    const text3 = "Lemme...";
+    let index3 = 0;
+    const speed3 = 150;
+
+    function typeWriter3(){
+        if (index3 < text3.length) {
+            document.getElementById("lemme").innerHTML += text3.charAt(index3);
+            index3++;
+            setTimeout(typeWriter3, speed3);
+        } else {
+            setTimeout( ()=> {
+                document.getElementById("lemme").innerHTML = "";
+                index3 = 0;
+                typeWriter3();
+            }, 1000);
+        }
+    }
+
+    typeWriter3();
+
+    const text4 = "My Services";
+    let index4 = 0;
+    const speed4 = 150;
+
+    function typeWriter4(){
+        if (index4 < text4.length) {
+            document.getElementById("My-Services").innerHTML += text4.charAt(index4);
+            index4++;
+            setTimeout(typeWriter4, speed4);
+        } else {
+            setTimeout( ()=> {
+                document.getElementById("My-Services").innerHTML = "";
+                index4 = 0;
+                typeWriter4();
+            }, 1000);
+        }
+    }
+
+    typeWriter4();
 
     // function showPage(pageId) {
     //     // Hide all sections

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Animation</title>
+    <style>
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid; /* Cursor effect */
+        }
+    </style>
+</head>
+<body>
+<h1 id="typing"></h1>
+
+<script>
+    const text = "Hi, I'm Erandi Gamage";
+    let index = 0;
+    const speed = 150; // Adjust typing speed
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+        } else {
+            // Delay before resetting
+            setTimeout(() => {
+                document.getElementById("typing").innerHTML = ""; // Clear the text
+                index = 0; // Reset index
+                typeWriter(); // Start typing again
+            }, 2000); // Delay after finishing typing
+        }
+    }
+
+    // Start the typing animation
+    typeWriter();
+</script>
+</body>
+</html>
