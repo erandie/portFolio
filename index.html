@@ -1339,13 +1339,6 @@
 
         }
 
-        /*.myAssignment {*/
-        /*    width: 800px;*/
-        /*    margin-left: 20px;*/
-        /*    margin-top: 100px;*/
-        /*    text-align: left;*/
-        /*}*/
-
         .myAssignment h1 {
             color: #f54444;
             font-size: 30px;
@@ -1451,6 +1444,82 @@
             height: 50%;
             border-radius: 10px;
         }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .popup-content {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 20%;
+            max-height: 80%;
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        .card-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #d2d1d1;
+            border-radius: 5px;
+        }
+
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .card-buttons a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+        .card-buttons a.run {
+            background-color: #28a745;
+        }
+
+        .card-buttons a.run:hover {
+            background-color: #218838;
+        }
+
+        /* Close Button */
+        .close-btn-02 {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+
 
         /*.modal-content::-webkit-scrollbar-thumb {*/
         /*    background: #888;*/
@@ -2122,13 +2191,13 @@
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon">&#9776;</label>
         <ul class="nav-links">
-            <li><a href="" onclick="showPage('home')">Home</a></li>
-            <li><a href="#" onclick="showPage('about-me')">About Me</a></li>
+            <li><a href="#home" onclick="showPage('home')">Home</a></li>
+            <li><a href="#about-me!" onclick="showPage('about-me')">About Me</a></li>
 <!--            <li><a href="#" onclick="showPage('Languages')">Languages</a></li>-->
-            <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+            <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
 <!--            <li><a href="#" onclick="showPage('services')">Services</a></li>-->
-            <li><a href="#" onclick="showPage('assignments')">Assignments</a></li>
-            <li><a href="#" onclick="showPage('getInTouch')">Contact Us</a></li>
+            <li><a href="#assignments" onclick="showPage('assignments')">Assignments</a></li>
+            <li><a href="#getInTouch" onclick="showPage('getInTouch')">Contact Us</a></li>
 <!--            <li><a href="" onclick="showPage('footer')">footer</a></li>-->
         </ul>
     </nav>
@@ -2141,25 +2210,25 @@
 
 <!--        <h1 class="hi-its-me">Hi, It's Me</h1>-->
         <h1 id="typing" class="erandi-gamage"></h1>
-        <h2 class="full-stack-dev" id="full-stack-dev"></h2>
+        <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev">Full Stack Developer!</span></h2>
         <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
         <button class="cv-btn">Download CV</button>
     </div>
     <section class="intro-images">
         <div class="image">
-            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
+            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">
         </div>
         <div class="image">
-            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
+            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">
         </div>
         <div class="image">
-            <img src="/Assignment/assests/IMG_20240522_153222_938.webp" alt="Profile Picture" class="profile-image">
+            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">
         </div>
     </section>
 </section>
 
 <!--section for laptop-->
-<div class="intro-section content-section">
+<div id="about-me!" class="intro-section content-section">
     <div class="intro-container">
 <!--    <div class="intro-container animate__animated animate__backInRight">-->
         <h1 id="lemme"></h1>
@@ -2392,23 +2461,34 @@
                 <!-- Scrollable Assignment List -->
                 <div class="assignment-list">
                     <div class="projects-container">
+
                         <!-- Project 1 -->
-                        <a href="https://github.com/erandie/AandCSuperMArket.git" target="_blank">
                             <div class="project-card">
 
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">AandC SuperMarket</h3>
                                     <p class="project-description">Step into the Digital Aisles: Discover
                                         and explore my latest web project, and experience a fresh take on innovation!</p>
                                 </div>
+                                </div>
                             </div>
-                        </a>
 
+                        <!--button pop up-->
+                        <div id="cardPopup" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode()">Code</button>
+                                    <button onclick="runAssignment()">Run</button>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Project 2 -->
-                        <a href="https://github.com/erandie/Layered-Architecture-Project.git" target="_blank">
-                            <div class="project-card">
+                            <div id="project-card" class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">Layered Architecture</h3>
@@ -2416,11 +2496,20 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
+                        <div id="cardPopup-02" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_ii()">Code</button>
+                                    <button onclick="runAssignment_ii()">Run</button>
+                                </div>
+                            </div>
+                        </div>
 
-                        <a href="https://github.com/erandie/ORM.git" target="_blank">
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">ORM</h3>
@@ -2428,10 +2517,21 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
-                        <a href="https://github.com/erandie/ORM-Assignment-02.git">
+                        <!--button pop up-->
+                        <div id="cardPopup-03" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_iii()">Code</button>
+                                    <button onclick="runAssignment_iii()">Run</button>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">ORM Assignment 02</h3>
@@ -2439,10 +2539,21 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
-                        <a href="https://github.com/erandie/Internet-Technology-Assignment_03.git" target="_blank">
+                        <!--button pop up-->
+                        <div id="cardPopup-04" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_iv()">Code</button>
+                                    <button onclick="runAssignment_iv()">Run</button>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">Internet Technology Assign-02</h3>
@@ -2450,10 +2561,21 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
-                        <a href="https://github.com/erandie/Assignment-04_InternetTechnology.git" target="_blank">
+                        <!--button pop up-->
+                        <div id="cardPopup-05" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_v()">Code</button>
+                                    <button onclick="runAssignment_v()">Run</button>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">Internet Technology Assign-04</h3>
@@ -2461,10 +2583,21 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
-                        <a href="https://github.com/erandie/Assignment-06-Internet-Technology.git" target="_blank">
+                        <!--button pop up-->
+                        <div id="cardPopup-06" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_vi()">Code</button>
+                                    <button onclick="runAssignment_vi()">Run</button>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">Internet Technology Assign-06</h3>
@@ -2472,10 +2605,21 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
 
-                        <a href="https://github.com/erandie/portFolio.git" target="_blank" class="card-link">
+                        <!--button pop up-->
+                        <div id="cardPopup-07" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_vii()">Code</button>
+                                    <button onclick="runAssignment_vii()">Run</button>
+                                </div>
+                            </div>
+                        </div>
+
                             <div class="project-card">
+                                <div class="assignment-card" onclick="showCardPopup()">
                                 <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                                 <div class="project-content">
                                     <h3 class="project-title">Port Folio</h3>
@@ -2483,7 +2627,18 @@
                                         and Change Yourself with Fun and Exciting Matches</p>
                                 </div>
                             </div>
-                        </a>
+                            </div>
+
+                        <!--button pop up-->
+                        <div id="cardPopup-08" class="popup">
+                            <div class="popup-content">
+                                <span class="close" onclick="closeCardPopup()">&times;</span>
+                                <div class="card-buttons">
+                                    <button onclick="navigateToCode_viii()">Code</button>
+                                    <button onclick="runAssignment_viii()">Run</button>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
             </div>
@@ -2510,6 +2665,9 @@
             </form>
         </div>
     </div>
+
+    <img src="" alt="digital earth ekk karkena video ekk!!">
+
 </section>
 
 
@@ -2575,6 +2733,7 @@
     const modal = document.getElementById("assignmentModal");
     const card = document.getElementById("assignmentCard");
     const closeModal = document.getElementById("closeModal");
+    const modall = document.getElementsByClassName("card-buttons");
 
     // Show modal when card is clicked
     card.addEventListener("click", () => {
@@ -2592,6 +2751,28 @@
             modal.style.display = "none"; // Hide modal
         }
     });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === modall) {
+            modal.style.display = "none"; // Hide modal
+        }
+    });
+
+    function showCardPopup() {
+        document.getElementById("cardPopup").style.display = "flex";
+    }
+    function closeCardPopup() {
+        document.getElementById("cardPopup").style.display = "none";
+    }
+
+    function navigateToCode() {
+        window.open("https://github.com/your-assignment-repo", "_blank");
+    }
+
+    function runAssignment() {
+        window.open("https://your-assignment-link", "_blank");
+    }
+
 
     const text = "Erandi Gamage";
     let index = 0;
@@ -2613,23 +2794,30 @@
 
     typeWriter();
 
-    const text2 = "Full Stack Developer";
-    let index2 = 0;
-    const speed2 = 150;
+    const typed = new Typed('.full-stack-dev', {
+        strings: ['<i> Full Stack Developer! </i>'],
+        typeSpeed: 80,
+        backSpeed: 80,
+        loop: true,
+    });
 
-    function typeWriter2(){
-        if (index2 < text2.length) {
-            document.getElementById("full-stack-dev").innerHTML += text2.charAt(index2);
-            index2++;
-            setTimeout(typeWriter2, speed2);
-        } else {
-            setTimeout( ()=> {
-                document.getElementById("full-stack-dev").innerHTML = "";
-                index2 = 0;
-                typeWriter2();
-            }, 1000);
-        }
-    }
+    // const text2 = "Full Stack Developer";
+    // let index2 = 0;
+    // const speed2 = 150;
+    //
+    // function typeWriter2(){
+    //     if (index2 < text2.length) {
+    //         document.getElementById("full-stack-dev").innerHTML += text2.charAt(index2);
+    //         index2++;
+    //         setTimeout(typeWriter2, speed2);
+    //     } else {
+    //         setTimeout( ()=> {
+    //             document.getElementById("full-stack-dev").innerHTML = "";
+    //             index2 = 0;
+    //             typeWriter2();
+    //         }, 1000);
+    //     }
+    // }
 
     typeWriter2();
 
