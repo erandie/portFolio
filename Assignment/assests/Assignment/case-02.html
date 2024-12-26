@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: #494b54;
+        }
+
+        .big-box {
+            height: 500px;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 150px;
+        }
+
+
+        .that-line{
+            height: 2px;
+            width: 80%;
+            background-color: white;
+            margin: 20px;
+        }
+
+        .middle{
+            display: flex;
+            gap: 15px;
+            margin-left: 150px;
+        }
+
+        .red-box{
+            width: 80px;
+            height: 40px;
+            background-color: red;
+            margin-top: 100px;
+            margin-left: 20px;
+        }
+
+        .green-box{
+            width: 80px;
+            height: 40px;
+            background-color: green;
+        }
+
+        .blue-box{
+            width: 80px;
+            height: 40px;
+            background-color: blue;
+        }
+
+        .yellow-box{
+            width: 80px;
+            height: 40px;
+            background-color: yellow;
+        }
+
+        .pink-box{
+            width: 80px;
+            height: 40px;
+            background-color: lightpink;
+        }
+
+        .pink-box-02 {
+            width: 80px;
+            height: 40px;
+            background-color: deeppink;
+            margin-left: 540px;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 40px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<section class="big-box">
+    <h1> Java Script Queue </h1>
+    <div class="red-box"></div>
+    <section class="that-line"></section>
+    <section class="middle">
+        <div class="green-box"></div>
+        <div class="blue-box"></div>
+        <div class="yellow-box"></div>
+        <div class="pink-box"></div>
+    </section>
+    <section class="that-line"></section>
+    <div class="pink-box-02"></div>
+</section>
+
+<script>
+    let arr = ["red", "green", "blue", "yellow", "lightpink", "deeppink"];
+    setInterval(() => {
+        let last_value = arr.pop();
+        arr.unshift(last_value);
+        console.log(arr);
+
+        document.getElementsByTagName("div")[0].style.background = arr[0];
+        document.getElementsByTagName("div")[1].style.background  = arr[1];
+        document.getElementsByTagName("div")[2].style.background  = arr[2];
+        document.getElementsByTagName("div")[3].style.background  = arr[3];
+        document.getElementsByTagName("div")[4].style.background  = arr[4];
+        document.getElementsByTagName("div")[5].style.background  = arr[5];
+    }, 1000);
+
+    // divs.forEach((div, index) => {
+    //     div.style.backgroundColor = arr[index];
+    // });
+    //
+    // }, 1000);
+
+</script>
+
+</body>
+</html>

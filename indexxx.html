@@ -16,6 +16,14 @@
             text-decoration: none;
             border: none;
             scroll-behavior: smooth;
+            font-family: sans-serif;
+        }
+
+        :root {
+            --bg-color: #fff;
+            --snd-bg-color: #d1e189;
+            --text-color: #000;
+            --main-color: #1c1c1c;
         }
 
 
@@ -57,11 +65,6 @@
             font-family: sans-serif;
         }
 
-        .fonts{
-            font-weight: normal;
-            color: red;
-        }
-
         .logo img {
             width: 50px;
             height: 50px;
@@ -86,7 +89,7 @@
 
         .navbar a:hover,
         .navbar a.active {
-            color: #3c3cbf;
+            color: black;
         }
 
 
@@ -118,6 +121,7 @@
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
+                background: var(--main-color);
                 transition: all 0.5s ease;
                 backdrop-filter: blur(10px);
             }
@@ -141,9 +145,7 @@
         }
 
         @media screen and (max-width: 768px) {
-            #home{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-            }
+
         }
 
         /*__________________________Intro Section_____________________________*/
@@ -169,13 +171,9 @@
         }
 
         #typing {
-            position: relative;
-            text-align: center;
-            margin-left: 600px;
             color: #3b82f6;
             font-size: 60px;
             font-weight: bold;
-            z-index: 1000;
         }
 
         #full-stack-dev {
@@ -220,7 +218,6 @@
         }
 
         .profile-image {
-            position: absolute;
             border-radius: 10px;
             transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
         }
@@ -228,8 +225,8 @@
         .intro-images .image img {
             margin-top: 100px;
             margin-left: 300px;
-            width: 24vw;
-            height: 38vw;
+            width: 25vw;
+            height: 35vw;
             border-radius: 1rem;
             animation: moving 4s ease-in-out infinite;
             transition: 0.4s ease;
@@ -2026,11 +2023,11 @@
 </head>
 <body>
 
-<header class="headerr font">
+<header class="headerr">
     <nav>
         <div class="logo">
             <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Logo">
-            <span class="fonts">Erandi Gamage</span>
+            <span>Erandi Gamage</span>
         </div>
 
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -2049,20 +2046,18 @@
 
 <section id="home" class="intro content-section" >
     <div class="intro-text">
-        <div class="image">
-            <img src="assests/IMG_20231215_130606_123.webp" alt="Profile Picture" class="profile-image">
-            <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev"></span></h2>
-            <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
-            <button class="cv-btn">Download CV</button>
-        </div>
         <!--        <h1 id="typing"></h1>-->
 
         <!--        <h1 class="hi-its-me">Hi, It's Me</h1>-->
         <h1 id="typing" class="erandi-gamage">Erandi Gamage</h1>
-
+        <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev"></span></h2>
+        <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
+        <button class="cv-btn">Download CV</button>
     </div>
     <section class="intro-images">
-
+        <div class="image">
+            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">
+        </div>
         <!--        <div class="image">-->
         <!--            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">-->
         <!--        </div>-->
@@ -2184,52 +2179,42 @@
 
         <div class="projects-container">
             <!-- Project 1 -->
-            <a href="https://github.com/erandie/portFolio.git" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">AandC SuperMarket</h3>
-                        <p class="project-description">
-                            Discover and explore my latest web project, and experience a fresh take on innovation!
-                        </p>
-                    </div>
+            <div class="project-card">
+                <img src="/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">AandC SuperMarket</h3>
+                    <p class="project-description"> <!--Step into the Digital Aisles:--> Discover
+                        and explore my latest web project, and experience a fresh take on innovation!</p>
                 </div>
-            </a>
-
+            </div>
 
             <!-- Project 2 -->
-            <a href="https://github.com/erandie/POS-System-02.git" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">Connect 4 Games</h3>
-                        <p class="project-description"> <!--Play and Enjoy: -->Dive into Connect4Games
-                            and Change Yourself with Fun and Exciting Matches</p>
-                    </div>
+            <div class="project-card">
+                <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">Connect 4 Games</h3>
+                    <p class="project-description"> <!--Play and Enjoy: -->Dive into Connect4Games
+                        and Change Yourself with Fun and Exciting Matches</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://github.com/erandie/Simple-Calculator-JS.git" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">Connect 4 Games</h3>
-                        <p class="project-description"><!--Play and Enjoy: -->Dive into Connect4Games
-                            and Change Yourself with Fun and Exciting Matches</p>
-                    </div>
+            <div class="project-card">
+                <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">Connect 4 Games</h3>
+                    <p class="project-description"><!--Play and Enjoy: -->Dive into Connect4Games
+                        and Change Yourself with Fun and Exciting Matches</p>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://github.com/erandie/Assignment-06-Internet-Technology.git" target="_blank" class="project-link">
-                <div class="project-card">
-                    <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
-                    <div class="project-content">
-                        <h3 class="project-title">Connect 4 Games</h3>
-                        <p class="project-description">Play and Enjoy: Dive into Connect4Games
-                            and Change Yourself with Fun and Exciting Matches</p>
-                    </div>
+            <div class="project-card">
+                <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">Connect 4 Games</h3>
+                    <p class="project-description">Play and Enjoy: Dive into Connect4Games
+                        and Change Yourself with Fun and Exciting Matches</p>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 
@@ -2343,7 +2328,7 @@
 
                     <!-- Project 2 -->
                     <div id="project-card" class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_ii()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Layered Architecture</h3>
@@ -2355,7 +2340,7 @@
 
                     <div id="cardPopup-02" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_i()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_ii()">Code</button>
                                 <button onclick="runAssignment_ii()">Run</button>
@@ -2364,7 +2349,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_iii()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">ORM</h3>
@@ -2377,7 +2362,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-03" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_ii()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_iii()">Code</button>
                                 <button onclick="runAssignment_iii()">Run</button>
@@ -2386,7 +2371,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_iv()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">ORM Assignment 02</h3>
@@ -2399,7 +2384,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-04" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_iii()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_iv()">Code</button>
                                 <button onclick="runAssignment_iv()">Run</button>
@@ -2408,7 +2393,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_v()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-02</h3>
@@ -2421,7 +2406,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-05" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_iv()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_v()">Code</button>
                                 <button onclick="runAssignment_v()">Run</button>
@@ -2430,7 +2415,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_vi()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-04</h3>
@@ -2443,7 +2428,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-06" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_v()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_vi()">Code</button>
                                 <button onclick="runAssignment_vi()">Run</button>
@@ -2452,7 +2437,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_vii()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-06</h3>
@@ -2465,7 +2450,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-07" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_vi()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_vii()">Code</button>
                                 <button onclick="runAssignment_vii()">Run</button>
@@ -2474,7 +2459,7 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="assignment-card" onclick="showCardPopup_viii()">
+                        <div class="assignment-card" onclick="showCardPopup()">
                             <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Port Folio</h3>
@@ -2487,7 +2472,7 @@
                     <!--button pop up-->
                     <div id="cardPopup-08" class="popup">
                         <div class="popup-content">
-                            <span class="close" onclick="closeCardPopup_vii()">&times;</span>
+                            <span class="close" onclick="closeCardPopup()">&times;</span>
                             <div class="card-buttons">
                                 <button onclick="navigateToCode_viii()">Code</button>
                                 <button onclick="runAssignment_viii()">Run</button>
@@ -2521,7 +2506,7 @@
         </div>
     </div>
 
-<!--    <img src="" alt="digital earth ekk karkena video ekk!!">-->
+    <img src="" alt="digital earth ekk karkena video ekk!!">
 
 </section>
 
@@ -2631,129 +2616,18 @@
     function showCardPopup() {
         document.getElementById("cardPopup").style.display = "flex";
     }
-    function showCardPopup_ii() {
-        document.getElementById("cardPopup-02").style.display = "flex";
-    }
-
-    function showCardPopup_iii() {
-        document.getElementById("cardPopup-03").style.display = "flex";
-    }
-
-    function showCardPopup_iv() {
-        document.getElementById("cardPopup-04").style.display = "flex";
-    }
-
-    function showCardPopup_v() {
-        document.getElementById("cardPopup-05").style.display = "flex";
-    }
-
-    function showCardPopup_vi() {
-        document.getElementById("cardPopup-06").style.display = "flex";
-    }
-
-    function showCardPopup_vii() {
-        document.getElementById("cardPopup-07").style.display = "flex";
-    }
-
-    function showCardPopup_viii() {
-        document.getElementById("cardPopup-08").style.display = "flex";
-    }
-
     function closeCardPopup() {
         document.getElementById("cardPopup").style.display = "none";
     }
 
-    function closeCardPopup_i() {
-        document.getElementById("cardPopup-02").style.display = "none";
-    }
-
-    function closeCardPopup_ii() {
-        document.getElementById("cardPopup-03").style.display = "none";
-    }
-
-    function closeCardPopup_iii() {
-        document.getElementById("cardPopup-04").style.display = "none";
-    }
-
-    function closeCardPopup_iv() {
-        document.getElementById("cardPopup-05").style.display = "none";
-    }
-
-    function closeCardPopup_v() {
-        document.getElementById("cardPopup-06").style.display = "none";
-    }
-
-    function closeCardPopup_vi() {
-        document.getElementById("cardPopup-07").style.display = "none";
-    }
-
-    function closeCardPopup_vii() {
-        document.getElementById("cardPopup-08").style.display = "none";
-    }
-
     function navigateToCode() {
-        window.open("https://github.com/erandie/POS-System-02.git", "_blank");
+        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
     }
 
     function runAssignment() {
-        window.open("assests/Assignment/index.html", "_blank");
+        window.open("assests/Assignment/case03.assi04.html", "_blank");
     }
 
-    function navigateToCode_ii() {
-        window.open("https://github.com/erandie/ORM-CW_The-Culinar-Academy.git", "_blank");
-    }
-
-    function runAssignment_ii() {
-        window.open("assests/Assignment/index_01.html", "_blank");
-    }
-
-    function navigateToCode_iii() {
-        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
-    }
-
-    function runAssignment_iii() {
-        window.open("assests/Assignment/case_01.html", "_blank");
-    }
-
-    function navigateToCode_iv() {
-        window.open("https://github.com/erandie/Internet-Technoloy_Assignment-09.git", "_blank");
-    }
-
-    function runAssignment_iv() {
-        window.open("assests/Assignment/case_02.html", "_blank");
-    }
-
-    function navigateToCode_v() {
-        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
-    }
-
-    function runAssignment_v() {
-        window.open("assests/Assignment/case_03.html", "_blank");
-    }
-
-    function navigateToCode_vi() {
-        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
-    }
-
-    function runAssignment_vi() {
-        window.open("assests/Assignment/case_04.html", "_blank");
-    }
-
-    function navigateToCode_vii() {
-        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
-    }
-
-    function runAssignment_vii() {
-        window.open("assests/Assignment/case_05.html", "_blank");
-    }
-
-    function navigateToCode_viii() {
-        window.open("https://github.com/erandie/Assignment-06-Internet-Technology.git", "_blank");
-    }
-
-    function runAssignment_viii() {
-        window.open("assests/Assignment/case_06.html", "_blank");
-    }
 
     const text2 = " Software Engineering Student!";
     let index2 = 0;
@@ -2818,6 +2692,39 @@
 </script>
 
 </body>
+<!--.intro-images{-->
+<!--    align-items: center;-->
+<!--    display: grid;-->
+<!--    grid-template-columns: repeat(3, 1fr);-->
+<!--    gap: 20px;-->
+<!--    border-image-width: 100px;-->
+<!--    height: 50px;-->
+<!--    border-radius: 10px;-->
+<!--    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);-->
+<!--}-->
+
+<!--.intro-images { -->
+<!--display: flex;-->
+<!--justify-content: space-around; -->
+<!--padding: 50px 0; -->
+<!--}-->
+
+<!--.intro-images { -->
+<!--display: grid; -->
+<!--grid-template-columns: repeat(3, 1fr); !* Create 3 equal columns for images *!-->
+<!--gap: 20px; !* Space between images *!-->
+<!--}-->
+
+<!--.intro-images .image> img{ -->
+<!--border-left: 10px solid gray;display: flex;-->
+<!--justify-content: space-around; -->
+<!--padding: 50px 0; -->
+<!--border-bottom-left-radius: 20px; -->
+<!--border-top-left-radius: 20px; -->
+<!--border-bottom: 2px solid lightgrey; -->
+<!--border-right: 2px solid lightgrey; -->
+<!--border-top: 2px solid lightgrey; -->
+<!--}-->
 
 </html>
 

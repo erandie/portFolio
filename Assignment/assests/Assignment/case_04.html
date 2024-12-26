@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case-04</title>
+</head>
+<style>
+    .set{
+        position: relative;
+        width: 100vw;
+        height: 50vw;
+    }
+    #set1{
+        background: white;
+    }
+    .head{
+        width: 100vw;
+        height: 80px;
+        position: sticky;
+        z-index: 8;
+        top: 0;
+    }
+    #header1{
+        background: red;
+    }
+    .card1{
+        position: absolute;
+        left: 10px;
+        top: 24px;
+        color: white;
+        font-size: 30px;
+    }
+    .topic{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        font-size: 50px;
+    }
+    #header2{
+        background: blue;
+    }
+    #set2{
+        background: deepskyblue;
+    }
+
+    #header3{
+        background: black;
+        color: white;
+    }
+    #set3{
+        background: dimgrey;
+    }
+
+    #header4{
+        background: brown;
+    }
+    #set4{
+        background: red;
+    }
+
+</style>
+<body>
+<section id="set1" class="set">
+    <h1 class="topic">Hello</h1>
+    <div id="header1" class="head">
+        <span class="card">
+            Card 1
+        </span>
+    </div>
+</section>
+
+<section id="set2" class="set">
+    <h1 class="topic">How</h1>
+    <div id="header2" class="head">
+        <span class="card">
+            Card 2
+        </span>
+    </div>
+</section>
+
+<section id="set3" class="set">
+    <h1 class="topic">Are</h1>
+    <div id="header3" class="head">
+        <span class="card">
+            Card 3
+        </span>
+    </div>
+</section>
+
+<section id="set4" class="set">
+    <h1 class="topic">You</h1>
+    <div id="header4" class="head">
+        <span class="card">
+            Card 4
+        </span>
+    </div>
+</section>
+</body>
+</html>
