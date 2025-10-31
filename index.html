@@ -641,9 +641,8 @@
         .skill-card:nth-child(8) .progress > div { animation: fill 1.5s ease forwards 1.6s; }
 
         @keyframes fill {
-            to { width: attr(style.width); }
+            to { width: var(--progress); }
         }
-
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
             .Languages-and-Frameworks,
@@ -1016,7 +1015,7 @@
         }
 
         .myAssignment h1 {
-            color: #f54444;
+            color: #98A1FF;
             font-size: 30px;
             margin-bottom: 10px;
             width: 300px;
@@ -1839,7 +1838,6 @@
     </nav>
 </header>
 
-
 <section id="home" class="intro content-section">
     <div class="intro-text">
         <h1 id="typing" class="erandi-gamage">Erandi Gamage</h1>
@@ -1853,8 +1851,8 @@
     <!-- Move image here -->
     <div class="intro-images">
         <div class="image-gallery">
-            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 1" class="gallery-img">
             <img src="Assignment/assests/Gemini_Generated_Image_f0co5of0co5of0co.png" alt="Erandi 2" class="gallery-img">
+            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 1" class="gallery-img">
 <!--            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 3" class="gallery-img">-->
         </div>
     </div>
@@ -1908,7 +1906,7 @@
     </div>
 </div>
 
-<section class="Languages-and-Frameworks content-section">
+<section class="Languages-and-Frameworks content-section" id="Languages">
     <div class="languages-container">
         <div class="header">
             <h1>Languages & Frameworks</h1>
@@ -1920,50 +1918,50 @@
             <div class="skill-card" data-level="90">
                 <i class="fab fa-java"></i>
                 <h3>Java</h3>
-                <div class="progress"><div style="width: 90%"></div></div>
+                <div class="progress"><div style="--progress: 90%"></div></div>
             </div>
 
             <div class="skill-card" data-level="85">
                 <i class="fab fa-html5"></i>
                 <h3>HTML5</h3>
-                <div class="progress"><div style="width: 85%"></div></div>
+                <div class="progress"><div style="--progress: 85%"></div></div>
             </div>
 
             <div class="skill-card" data-level="80">
                 <i class="fab fa-css3-alt"></i>
                 <h3>CSS3</h3>
-                <div class="progress"><div style="width: 80%"></div></div>
+                <div class="progress"><div style="--progress: 80%"></div></div>
             </div>
 
             <div class="skill-card" data-level="75">
                 <i class="fab fa-js-square"></i>
                 <h3>JavaScript</h3>
-                <div class="progress"><div style="width: 75%"></div></div>
+                <div class="progress"><div style="--progress: 75%"></div></div>
             </div>
 
             <!-- Framework Cards -->
             <div class="skill-card" data-level="70">
                 <i class="fab fa-react"></i>
                 <h3>React</h3>
-                <div class="progress"><div style="width: 70%"></div></div>
+                <div class="progress"><div style="--progress: 70%"></div></div>
             </div>
 
             <div class="skill-card" data-level="80">
                 <img src="https://spring.io/img/logos/spring.svg" alt="Spring" class="icon-img">
                 <h3>Spring Boot</h3>
-                <div class="progress"><div style="width: 80%"></div></div>
+                <div class="progress"><div style="--progress: 80%"></div></div>
             </div>
 
             <div class="skill-card" data-level="65">
                 <i class="fab fa-node-js"></i>
                 <h3>Node.js</h3>
-                <div class="progress"><div style="width: 65%"></div></div>
+                <div class="progress"><div style="--progress: 65%"></div></div>
             </div>
 
             <div class="skill-card" data-level="60">
                 <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" class="icon-img">
                 <h3>MySQL</h3>
-                <div class="progress"><div style="width: 60%"></div></div>
+                <div class="progress"><div style="--progress: 60%"></div></div>
             </div>
         </div>
     </div>
