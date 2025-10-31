@@ -8,6 +8,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
+
     <style>
 
         * {
@@ -194,20 +196,22 @@
         }
 
         .cv-btn {
-            padding: 12px 28px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
             background: #3c3cbf;
             color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(60, 60, 191, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
         .cv-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(60, 60, 191, 0.4);
+            background: #5e5eff;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(60, 60, 191, 0.4);
         }
 
         /* === PROFILE IMAGE - RIGHT SIDE === */
@@ -228,7 +232,7 @@
 
         .gallery-img {
             width: 380px;
-            height: 400px;
+            height: 500px;
             max-width: 90vw;
             object-fit: cover;
             border-radius: 16px;
@@ -241,11 +245,6 @@
             transform: translateY(-10px) scale(1.05);
             box-shadow: 0 15px 35px rgba(60, 60, 191, 0.3);
             border: 3px solid #3c3cbf;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(60, 60, 191, 0.3);
         }
 
         @keyframes float {
@@ -315,356 +314,350 @@
             }
         }
 
-        /*_______________________Introduction Section______________________________ */
-
+        /* ==================== ABOUT ME - LAPTOP ==================== */
         .intro-section {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 90vh;
-            background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(48, 48, 48, 0.7));
-            /*padding: 20px;*/
+            min-height: 90vh;
+            padding: 80px 20px;
+            background: #121212;
+            perspective: 1500px;
         }
 
         .intro-container {
             max-width: 1000px;
-            background-color: #1a1a1a;
-            padding: 40px 70px;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            background: rgba(26, 26, 26, 0.85);
+            padding: 60px;
+            border-radius: 28px;
+            box-shadow:
+                    0 25px 60px rgba(0, 0, 0, 0.6),
+                    0 0 40px rgba(148, 167, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(148, 167, 255, 0.2);
             color: white;
-            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+            transition: all 0.6s ease;
+            transform-style: preserve-3d;
         }
 
-
-        .intro-container:hover{
-            transform: scale(1.1);
-            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
+        .intro-container:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow:
+                    0 40px 80px rgba(0, 0, 0, 0.7),
+                    0 0 60px rgba(148, 167, 255, 0.3);
         }
 
         .intro-container h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 3.8rem;
+            font-weight: 800;
             color: #94A7FF;
-            margin-bottom: 0;
+            margin: 0 0 0.5rem;
+            text-shadow: 0 4px 15px rgba(148, 167, 255, 0.4);
         }
 
         .intro-container h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
+            font-size: 2.6rem;
             color: #e6e6e6;
+            margin: 0 0 1.5rem;
             display: flex;
             align-items: center;
+            gap: 12px;
         }
 
         .intro-container h2 span {
-            font-size: 2.3rem;
-            margin-left: 10px;
+            font-size: 2.2rem;
         }
 
         .intro-container p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-top: 15px;
+            font-size: 1.15rem;
+            line-height: 1.8;
             color: #cccccc;
+            margin-bottom: 1.2rem;
+            text-align: justify;
         }
 
-        .introduce-Me{
+        /* ==================== ABOUT ME - MOBILE/TABLET ==================== */
+        .introduce-Me {
             display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 100px;
-            gap: 100px;
+            flex-direction: column;
+            gap: 30px;
+            padding: 80px 20px;
+            background: #121212;
         }
 
-        .education-container{
-            width: 100%;
-            min-width: 100%;
-            background-color: #161616;
-            padding: 2rem;
-            border-left: 4px solid #00aaff;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-
+        .info-card {
+            background: rgba(22, 22, 22, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #00aaff;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .edu-title-line{
+        .info-card::before {
+            content: '';
             position: absolute;
-            margin-left: -8px;
-            margin-top: 2px;
-            height: 20px;
-            width: 5px;
-            background-color: black;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, #00aaff, #3c3cbf);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
         }
 
-        .free-time-container{
-            margin-top: 20px;
-            width: 100%;
-            background-color: #161616;
-            padding: 2rem;
-            border-left: 4px solid #00aaff;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        .info-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .family-container{
-            margin-top: 20px;
-            width: 100%;
-            background-color: #161616;
-            padding: 2rem;
-            border-left: 4px solid #00aaff;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        .info-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 170, 255, 0.25);
+            border-left-color: #3c3cbf;
         }
 
-
-        @media (max-width: 320px) {
-            .intro-container{
-
-            }
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
-        /* Mobile Medium */
-        @media (max-width: 375px) {
-
+        .info-card h3 {
+            font-size: 1.6rem;
+            color: #fff;
+            margin: 0 0 1.2rem;
+            text-align: center;
+            font-weight: 700;
         }
 
-        /* Mobile Large */
-        @media (max-width: 425px) {
-
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
-        /* Tablet */
-        @media (min-width: 768px) {
-            .intro-section{
-                display: block;
-                display: flex;
-            }
-
-            .intro-container {
-                display: block;
-                justify-content: center;
-                width: 90%;
-            }
-
-            .introduce-Me{
-                display: none;
-            }
+        .info-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
         }
 
-        /* Laptop */
-        @media (max-width: 1024px) {
-
+        .info-list li::before {
+            content: 'Check Mark';
+            position: absolute;
+            left: 0;
+            color: #00aaff;
+            font-weight: bold;
         }
 
-        /* Laptop Large */
-        @media (max-width: 1440px) {
-
+        .family-text {
+            color: #ccc;
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 1.7;
+            margin: 0;
         }
-        /*___________________________________________*/
 
+        /* ==================== RESPONSIVE LOGIC ==================== */
         @media (max-width: 768px) {
             .intro-section {
-                display: none;
+                display: none !important;
             }
 
             .introduce-Me {
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-                display: block; /* Show introduce-Me on small screens */
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
+                display: flex;
+                background: #350008;
             }
 
-            .education-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            .info-card {
+                background: rgba(53, 0, 8, 0.95);
+                border-left-color: #ff4444;
             }
 
-            .free-time-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            .info-card::before {
+                background: linear-gradient(90deg, #ff4444, #cc0000);
             }
 
-            .family-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            .info-card:hover {
+                box-shadow: 0 25px 50px rgba(255, 68, 68, 0.3);
             }
 
-            .intro-container {
-                padding: 20px;
+            .info-list li::before {
+                color: #ff6666;
             }
-
-            .intro-container h1 {
-                font-size: 2.5rem;
-            }
-
-            .intro-container h2 {
-                font-size: 2rem;
-            }
-
-            .intro-container p {
-                font-size: 1rem;
-            }
-
         }
 
-        /*____________________LanguagesAndFrameworks_________________________*/
+        @media (min-width: 769px) {
+            .introduce-Me {
+                display: none !important;
+            }
 
+            .intro-section {
+                display: flex;
+            }
+        }
+
+        /* ==================== LANGUAGES & FRAMEWORKS ==================== */
         .Languages-and-Frameworks {
-            height: auto; /* Change height to auto */
-            background-color: #121212;
+            padding: 100px 20px;
+            background: #121212;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Stack items vertically */
         }
 
         .languages-container {
-            max-width: 80%;
-            background-color: #1a1a1a;
-            padding: 40px 70px;
+            max-width: 1100px;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 50px;
             border-radius: 25px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            color: white;
-            margin: 40px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            transition: transform 0.4s ease;
         }
 
-
-        .languages-container:hover{
-            transform: scale(1.05);
-            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
+        .languages-container:hover {
+            transform: translateY(-10px);
         }
 
-        .header{
-            font-size: 1.2rem;
-            color: #B0B3C5;
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .header h1 {
-            text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #98A1FF;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
-        .middle {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 30px 0;
+        .language-para {
+            color: #B0B3C5;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .poll {
-            height: 10px;
-            width: 150px;
-            background-color: #ffffff;
-            margin-bottom: 20px;
-            border-radius: 5px;
+        /* Skill Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: #2a2a2a;
+            padding: 1.8rem;
+            border-radius: 18px;
+            text-align: center;
+            transition: all 0.4s ease;
             position: relative;
-            border-left: 100px solid #559ef1;
+            overflow: hidden;
+            border: 1px solid #333;
         }
 
-        .imagess {
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, #3c3cbf, #00aaff);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
 
-        .first-one{
-            display: flex;
-            justify-content: center;
+        .skill-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .second-2{
-            display: flex;
-            justify-content: space-evenly;
+        .skill-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(60, 60, 191, 0.3);
+            border-color: #3c3cbf;
         }
 
-        .third-3{
-            display: flex;
-            justify-content: space-around;
+        .skill-card i {
+            font-size: 2.8rem;
+            color: #3c3cbf;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
         }
 
-        .last-4{
-            display: flex;
-            justify-content: space-between;
+        .skill-card:hover i {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 15px rgba(60, 60, 191, 0.6));
         }
 
-        .ending{
-            align-self: center;
-            width: 80%;
+        .icon-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
         }
 
-        .lng-img:hover {
-            transform: scale(1.5); /* Scale effect on hover */
-
+        .skill-card:hover .icon-img {
+            filter: brightness(1) hue-rotate(240deg);
         }
 
-
-
-        .lng-img {
-            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin: 0.8rem 0;
+            color: #fff;
         }
 
-        @media screen and (min-width: 1440px) {
-
+        .progress {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
         }
 
-        @media  screen and (min-width: 1024px) {
-
+        .progress > div {
+            height: 100%;
+            background: linear-gradient(90deg, #3c3cbf, #00aaff);
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease;
         }
 
+        /* Animate on load */
+        .skill-card:nth-child(1) .progress > div { animation: fill 1.5s ease forwards 0.2s; }
+        .skill-card:nth-child(2) .progress > div { animation: fill 1.5s ease forwards 0.4s; }
+        .skill-card:nth-child(3) .progress > div { animation: fill 1.5s ease forwards 0.6s; }
+        .skill-card:nth-child(4) .progress > div { animation: fill 1.5s ease forwards 0.8s; }
+        .skill-card:nth-child(5) .progress > div { animation: fill 1.5s ease forwards 1s; }
+        .skill-card:nth-child(6) .progress > div { animation: fill 1.5s ease forwards 1.2s; }
+        .skill-card:nth-child(7) .progress > div { animation: fill 1.5s ease forwards 1.4s; }
+        .skill-card:nth-child(8) .progress > div { animation: fill 1.5s ease forwards 1.6s; }
+
+        @keyframes fill {
+            to { width: attr(style.width); }
+        }
+
+        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
-            .languages-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            .Languages-and-Frameworks,
+            .languages-container {
+                background: #350008;
             }
-
-            .Languages-and-Frameworks{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-            }
-
-            .last-4{
-                display: flex;
-                justify-content: space-around;
-            }
-
+            .header h1 { font-size: 2.2rem; }
+            .skills-grid { grid-template-columns: 1fr 1fr; }
         }
 
-        @media (max-width: 425px) {
-            .last-4{
-                display: flex;
-                justify-content: space-evenly;
-            }
+        @media (max-width: 480px) {
+            .skills-grid { grid-template-columns: 1fr; }
+            .skill-card { padding: 1.5rem; }
         }
-
-        @media (max-width: 375px) {
-            .last-4{
-                display: flex;
-                justify-content: space-around;
-            }
-        }
-
-        @media (max-width: 320px) {
-            .LanguagesTitle{
-                font-size: 19px;
-            }
-
-            .last-4{
-                display: flex;
-                justify-content: space-around;
-            }
-
-            .language-para{
-                width: 200%;
-                font-size: small;
-                margin: 1px -45px -15px;
-            }
-
-        }
-
-
-
 
 
         /*________________________MyProjects_______________________________________*/
@@ -793,386 +786,199 @@
         }
 
 
-        /*___________________________Services__________________________*/
-
-        .services{
-            height: auto;
-            background-color: #121212;
+        /* ==================== SERVICES SECTION ==================== */
+        .services {
+            padding: 120px 20px;
+            background: #121212;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
         }
 
-        .service-container{
-            max-width: 80%;
-            background-color: #1a1a1a;
-            padding: 40px 130px;
-            border-radius: 25px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            color: white;
-            margin: 40px;
-            display: flex;
-            flex-direction: column;
+        .service-container {
+            max-width: 1200px;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 60px 40px;
+            border-radius: 28px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.5s ease;
         }
 
-        /*.service-header{*/
-        /*    width: 500px;*/
-        /*    margin-left: 50px;*/
-        /*}*/
+        .service-container:hover {
+            transform: translateY(-15px);
+        }
 
-        .service-cards{
+        .service-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .service-title {
             display: flex;
             align-items: center;
-            /*margin-left: 100px;*/
+            justify-content: center;
+            gap: 15px;
+            font-size: 2rem;
+            color: #98A1FF;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
-        .first-card{
-            margin: 40px;
+        .service-topic-line {
+            width: 6px;
+            height: 50px;
+            background: linear-gradient(to bottom, #3c3cbf, #00aaff);
+            border-radius: 3px;
+        }
+
+        .service-para {
+            color: #B0B3C5;
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Service Cards */
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: rgba(42, 42, 42, 0.7);
+            padding: 2rem;
             border-radius: 20px;
-            height: 170px;
-            width: 200px;
-            background-color: #2e2e2e;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
             text-align: center;
-            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(60, 60, 191, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
-        .first-card:hover {
-            transform: scale(1.08);
-
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 4px;
+            background: linear-gradient(90deg, #3c3cbf, #00aaff);
+            transition: left 0.5s ease;
         }
 
-        .service-btn > button{
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            color: white;
-            background-color: gray;
-            border-radius: 5px;
-            border: none;
-            box-shadow: rgba(153, 152, 153, 0.4) 5px 5px, rgba(109, 108, 108, 0.3) 10px 10px, rgba(68, 68, 68, 0.2) 10px 10px;
-            /*font-size: 16px;*/
+        .service-card:hover::before {
+            left: 0;
         }
 
-        /*.cv-btn-3{*/
-        /*    position: absolute;*/
-        /*    padding: 10px 30px;*/
-        /*    color: white;*/
-        /*    font-size: 16px;*/
-        /*    cursor: pointer;*/
-
-        /*}*/
-
-        .boxIcon{
-            width: 120px;
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            background: rgba(50, 50, 70, 0.8);
+            box-shadow: 0 25px 50px rgba(60, 60, 191, 0.3);
+            border-color: #3c3cbf;
         }
 
-        .service-title{
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(60, 60, 191, 0.2);
+            border-radius: 50%;
             display: flex;
-            justify-content: flex-start;
-            margin: 20px;
-            font-size: larger;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
         }
 
-        .service-para{
-            margin-left: 35px;
+        .service-card:hover .icon-wrapper {
+            background: #3c3cbf;
+            transform: scale(1.15) rotate(8deg);
+            box-shadow: 0 0 30px rgba(60, 60, 191, 0.5);
         }
 
-        .service-topic-line{
-            margin-top: 1px;
-            margin-right: 10px;
-            height: 30px;
-            width: 5px;
-            background-color: red;
+        .icon-wrapper i {
+            font-size: 2.2rem;
+            color: #98A1FF;
         }
 
-        @media screen and (min-width: 1440px) {
-            .service-container{
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                align-content: center;
-                align-self: center;
-            }
-
-            .service-header{
-                align-items: flex-end;
-                text-align:center;
-                justify-content: left;
-                align-content: flex-end;
-                align-self: flex-end;
-
-            }
-
-            .service-para{
-                width: 1000px;
-            }
-
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            color: #fff;
         }
 
-        @media screen and (max-width: 1023px) {
-            .service-container{
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-                align-content: center;
-                align-self: center;
-            }
-
-            .service-cards{
-                margin-top: 15px;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .first-card{
-                margin: 50px;
-                border-radius: 20px;
-                height: 170px;
-                width: 200px;
-                background-color: #2e2e2e;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                text-align: center;
-
-            }
-
+        .service-card p {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        @media (min-width: 1024px) and (max-width: 1440px) {
-            .service-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 30px;
-            }
-
-            .service-title {
-                text-align: left;
-            }
-
-            .service-para {
-                width: 100%;
-                margin: 0 auto 20px;
-                font-size: 16px;
-            }
-
-            .service-cards {
-                width: 110%;
-            }
-
-            .first-card:nth-child(4){
-                margin-right: 100px;
-            }
+        /* Buttons */
+        .service-btn {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
+        .cv-btn,
+        .hire-btn {
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
 
+        .cv-btn {
+            background: #3c3cbf;
+            color: white;
+        }
+
+        .cv-btn:hover {
+            background: #5e5eff;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(60, 60, 191, 0.4);
+        }
+
+        .hire-btn {
+            background: transparent;
+            color: #98A1FF;
+            border: 2px solid #3c3cbf !important;
+        }
+
+        .hire-btn:hover {
+            background: #3c3cbf;
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(60, 60, 191, 0.3);
+        }
+
+        /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
-            .services{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-
-            }
-
-            .service-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-                /*width: 70%;*/
-                /*align-items: center;*/
-                /*text-align: center;*/
-                /*justify-content: center;*/
-                /*align-content: center;*/
-                /*align-self: center;*/
-                place-items: center;
-            }
-
-            .service-cards{
-                /*margin-left: 30px;*/
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .first-card{
-                background-color: #350008;
-                width: 25vw;
-                height: 25vw;
-            }
-
-            .service-para{
-                width: 400px;
-                font-size: 14px;
-            }
-
-        }
-
-        @media (min-width: 425px) and (max-width: 600px) {
+            .services,
             .service-container {
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                place-items: center;
-                margin-top: -100px;
-
+                background: #350008;
             }
-
-            .service-cards{
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
-            }
-
-            .first-card{
-                border-radius: 20px;
-                height: 80px;
-                width: 60vw;
-                background-color: #350008FF;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                display: flex;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                text-align: center;
-                justify-content: center;
-            }
-
-            .uxDesign{
-                margin-top: 30px;
-            }
-
-            .service-title {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                margin: 10px;
-                width: 100%;
-            }
-
-            .service-para {
-                width: 60vw;
-                font-size: 12px;
-                text-align: center;
-                margin-top: 15px;
-            }
-
-            .boxIcon{
-                width: 90px;
-            }
+            .service-title { font-size: 2.2rem; }
+            .service-topic-line { height: 40px; }
+            .service-cards { grid-template-columns: 1fr; }
+            .service-btn { flex-direction: column; align-items: center; }
+            .cv-btn, .hire-btn { width: 80%; }
         }
 
-        @media (max-width: 425px) {
-            .service-container{
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                width: 100px;
-                place-items: center;
-            }
-
-
-            .service-cards{
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-            }
-
-            .first-card{
-
-                border-radius: 20px;
-                height: 80px;
-                width: 50vw;
-                background-color: #350008FF;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                display: flex;
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            .uxDesign{
-                padding-top: 30px;
-            }
-
-            .service-btn{
-                height: 60px;
-                /*width: 400px;*/
-                padding-right: 200px;
-                margin-right: -180px;
-                margin-top: 20px;
-
-            }
-
-            .service-para{
-                margin-left: 100px;
-                width: 60vw;
-                font-size: 15px;
-            }
-
-            .service-title {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: -25px;
-                text-align: center;
-            }
-
-        }
-
-        @media (max-width: 375px) {
-            .service-para{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 125px;
-                text-align: center;
-            }
-
-            .boxIcon{
-                width: 28vw;
-                aspect-ratio: 1/1;
-            }
-
-            .uxDesign{
-                margin-top: -5px;
-                font-size: small;
-            }
-
-        }
-
-        @media (max-width: 320px) {
-            .service-container{
-                font-size: 13px;
-            }
-
-            .service-para{
-                font-size: 12px;
-
-            }
-
-            .service-para{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 0px;
-                text-align: center;
-            }
-
-            .boxIcon{
-                width: 28vw;
-                aspect-ratio: 1/1;
-            }
-
-
-
-        }
-
-        @media (min-width: 320px) {
-            .service-para{
-                margin: -0px;
-
-            }
+        @media (max-width: 480px) {
+            .service-container { padding: 40px 20px; }
+            .service-para { font-size: 1rem; }
+            .icon-wrapper { width: 70px; height: 70px; }
+            .icon-wrapper i { font-size: 1.8rem; }
         }
 
         /*___________________________Assignment__________________________*/
@@ -1607,199 +1413,243 @@
 
 
 
-        /*___________________________GetInTouch__________________________*/
-
-        .getInTouch{
-            background-color: #181818;
-            padding: 150px 0;
+        /* ==================== GET IN TOUCH ==================== */
+        .getInTouch {
+            padding: 150px 20px;
+            background: #181818;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            /*margin: -110px;*/
-
+            overflow: hidden;
+            position: relative;
         }
 
-        .git-container{
+        .git-container {
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: 1380px;
-            max-width: 80%;
-            margin: -100px;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px;
+            width: 100%;
+            background: #1c1c1c;
+            padding: 80px 60px;
+            border-radius: 28px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ==================== 3D GLOBE ==================== */
+        .globe-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .globe {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: step-start 20s infinite linear;
+        }
+
+        .globe-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #00d2ff, #3a7bd5, #1a1a2e);
+            box-shadow:
+                    inset -40px -40px 80px rgba(0, 0, 0, 0.6),
+                    0 0 60px rgba(0, 210, 255, 0.4),
+                    0 0 120px rgba(0, 210, 255, 0.2);
+            transform-style: preserve-3d;
+        }
+
+        .globe::before,
+        .globe::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px dashed rgba(0, 210, 255, 0.3);
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        .globe::before {
+            transform: rotateX(90deg);
+        }
+
+        .globe::after {
+            transform: rotateY(90deg);
+        }
+
+        @keyframes rotateGlobe {
+            from { transform: rotateY(0deg) rotateX(20deg); }
+            to { transform: rotateY(360deg) rotateX(20deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        /* ==================== CONTACT FORM ==================== */
+        .git-form {
+            flex: 1;
+            background: #262626;
+            padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            background-color: #1c1c1c;
-            padding: 80px;
-            color: white;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
         }
 
-        .git-form{
-            margin-left: 60px;
-            background-color: #262626;
-            padding: 60px;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            width: 40%;
+        .git-form h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
-        .git-container h1 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-
-        .git-container p {
-            margin-bottom: 20px;
+        .git-form p {
             color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
-        .git-container label {
-            display: block;
-            margin-bottom: 10px;
-            color: #b0b0b0;
-
+        /* Floating Labels */
+        .input-group {
+            position: relative;
+            margin-bottom: 2rem;
         }
 
-        .git-container input,
-        .git-container textarea {
+        .input-group input,
+        .input-group textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 16px 0 8px;
+            background: transparent;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #333;
-            color: white;
+            border-bottom: 2px solid #555;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group textarea {
+            min-height: 120px;
             resize: vertical;
-            max-width: 100%;
-            min-width: 100%;
         }
 
-        .git-container button {
+        .input-group label {
+            position: absolute;
+            top: 16px;
+            left: 0;
+            color: #aaa;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            transform-origin: 0 0;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group input:valid,
+        .input-group textarea:valid {
+            border-bottom-color: #00d2ff;
+        }
+
+        .input-group input:focus + label,
+        .input-group textarea:focus + label,
+        .input-group input:valid + label,
+        .input-group textarea:valid + label {
+            top: -10px;
+            font-size: 0.85rem;
+            color: #00d2ff;
+            font-weight: 600;
+        }
+
+        /* Send Button */
+        .send-btn {
             width: 100%;
-            padding: 15px;
-            border: none;
-            background-color: #4CAF50;
+            padding: 16px;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
             color: white;
-            font-size: 18px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
             cursor: pointer;
-            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
         }
 
-        @media screen and (min-width: 1440px) {
-
+        .send-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 210, 255, 0.5);
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
         }
 
-        @media  screen and (max-width: 1024px) {
-            .git-form{
-                margin-left: 50px;
-                background-color: #262626;
-                padding: 60px;
-                border-radius: 10px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                width: 55%;
+        .send-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .send-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .send-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.7s;
+        }
+
+        .send-btn:hover::before {
+            left: 100%;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .git-container {
+                flex-direction: column;
+                padding: 60px 40px;
+                gap: 40px;
             }
+            .globe-container { order: -1; }
+            .git-form { width: 100%; max-width: 600px; }
         }
 
         @media (max-width: 768px) {
-            .getInTouch{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
+            .getInTouch,
+            .git-container,
+            .git-form {
+                background: #350008;
             }
-
-            .git-container{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-            }
-
-            .git-form{
-                background: linear-gradient(to right, rgb(53, 0, 8), rgb(119, 0, 18));
-                width: 85%;
-                margin-left: 20px;
-            }
-
-            .git-container input,
-            .git-container textarea {
-                background-color: #350008;
-            }
-
+            .globe { width: 200px; height: 200px; }
+            .git-form h1 { font-size: 2.2rem; }
         }
 
-        @media (min-width: 425px) and (max-width: 540px) {
-            .getInTouch{
-                overflow: hidden;
-            }
-
-            .git-container{
-                max-width: 150%;
-                border-radius: 20px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                background-color: #1c1c1c;
-                color: white;
-                margin-left: -50px;
-            }
-
-            .git-form{
-                background-color: #262626;
-                padding: 40px;
-                border-radius: 10px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                width: 80%;
-            }
+        @media (max-width: 480px) {
+            .git-container { padding: 40px 20px; }
+            .git-form { padding: 30px; }
+            .globe { width: 160px; height: 160px; }
         }
-
-        @media (max-width: 425px) {
-            .getInTouch{
-                overflow: hidden;
-            }
-
-            .git-container{
-                max-width: 150%;
-                border-radius: 20px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                background-color: #1c1c1c;
-                color: white;
-                margin-left: -50px;
-            }
-
-            .git-form{
-                background-color: #262626;
-                padding: 40px;
-                border-radius: 10px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-                width: 80%;
-            }
-        }
-
-        @media (max-width: 375px) {
-
-        }
-
-        @media (max-width: 320px) {
-
-        }
-
-
-
-        /*@keyframes rotate3d {*/
-        /*    from {*/
-        /*        transform: rotateX(0deg) rotateY(0deg);*/
-        /*    }*/
-        /*    to {*/
-        /*        transform: rotateX(360deg) rotateY(360deg);*/
-        /*    }*/
-
-        /*}*/
-
-        /*.earth-container{*/
-        /*    perspective: 1000px;*/
-        /*}*/
-
-        /*.rotate-earth{*/
-        /*    width: 200px;*/
-        /*    height: auto;*/
-        /*    animation: rotate3d 10s linear infinite;*/
-        /*    transform-style: preserve-3d;*/
-        /*}*/
 
         /* ==================== FOOTER ==================== */
         #footer {
@@ -1994,120 +1844,130 @@
     <div class="intro-text">
         <h1 id="typing" class="erandi-gamage">Erandi Gamage</h1>
         <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev"></span></h2>
-        <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
-        <button class="cv-btn">Download CV</button>
+        <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p> <br/>
+        <a href="Assignment/assests/Erandi Gamage CV-1.pdf" download class="cv-btn">
+            Download CV
+        </a>
     </div>
 
     <!-- Move image here -->
     <div class="intro-images">
         <div class="image-gallery">
             <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 1" class="gallery-img">
-            <img src="Assignment/assests/Gemini_Generated_Image_7b5dq47b5dq47b5d.png" alt="Erandi 2" class="gallery-img">
+            <img src="Assignment/assests/Gemini_Generated_Image_f0co5of0co5of0co.png" alt="Erandi 2" class="gallery-img">
 <!--            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 3" class="gallery-img">-->
         </div>
     </div>
 </section>
 
-<!--section for laptop-->
+<!-- LAPTOP VERSION -->
 <div id="about-me!" class="intro-section content-section">
     <div class="intro-container">
-        <!--    <div class="intro-container animate__animated animate__backInRight">-->
         <h1 id="lemme"></h1>
-        <h2>Introduce MySelf!! <span>😉</span></h2>
-        <p>Um proud to share my academic journey, starting with passing the scholarship exam. I performed well in my Ordinary Level (O/L-2018) and Advanced Level (A/L-2021) examination also.</p>
+        <h2>Introduce Myself! <span> 🥰</span></h2>
+        <p>I'm proud to share my academic journey, starting with passing the scholarship exam. I performed well in my Ordinary Level (O/L-2018) and Advanced Level (A/L-2021) examinations.</p>
         <p>After completing my A/Ls, I enrolled in ESOFT Metro Campus, where I excelled and earned an IT diploma with the best performance.</p>
         <p>Currently, I am furthering my education as an undergraduate student in software engineering at the Institute of Java and Software Engineering (IJSE).</p>
         <p>In my free time, I enjoy listening to music, drawing arts, and watching movies and TV series. My family consists of my mother, father, and myself.</p>
     </div>
 </div>
 
-<!--section for tablet and mobiles-->
+<!-- MOBILE & TABLET VERSION -->
 <div id="about-me" class="introduce-Me content-section">
-    <div class="education-container">
-        <div class="edu-title-line"></div>
-        <h3 class="intro-edu">Education</h3> <br>
-        <ul style="list-style-type: none" class="edu-list">
-            <li> <b>-</b> Step To Education - Passing Scholarship exam(Grade-05) </li> <br>
-            <li> <b>-</b> Ordinary Level - (OL(2018) - A5 B4)</li> <br>
-            <li> <b>-</b> Advanced Level - (AL(2021) - C3)</li> <br>
-            <li> <b>-</b> Got IT Diploma With Best Performances In Esoft Metro Campus </li> <br>
-            <li> <b>-</b> Currently Present At IJSE As an Undergraduate SES</li> <br>
+    <!-- Education -->
+    <div class="info-card">
+        <div class="card-icon">Graduation Cap</div>
+        <h3>Education</h3>
+        <ul class="info-list">
+            <li>Passing Scholarship Exam (Grade 5)</li>
+            <li>O/L (2018) - A5 B4</li>
+            <li>A/L (2021) - C3</li>
+            <li>IT Diploma with Best Performance - ESOFT</li>
+            <li>Undergraduate SES - IJSE</li>
         </ul>
     </div>
 
-    <div class="free-time-container">
-        <div class="edu-title-line"></div>
-        <h3> In My Free Time Happy To do these to spend My Time </h3> <br>
-        <ul style="list-style-type: none" class="free-time-list">
-            <li> <b>-</b> Watching Movies / TV Series </li> <br>
-            <li> <b>-</b> Listen Songs </li> <br>
-            <li> <b>-</b> Drawing Arts </li> <br>
-            <li> <b>-</b> Scrolling through FB Instagram Pinterest and YT</li> <br>
-            <li> <b>-</b> Talking gossips with loved ones </li> <br>
+    <!-- Free Time -->
+    <div class="info-card">
+        <div class="card-icon">Smiling Face with Heart-Eyes</div>
+        <h3>Free Time</h3>
+        <ul class="info-list">
+            <li>Watching Movies & TV Series</li>
+            <li>Listening to Music</li>
+            <li>Drawing Arts</li>
+            <li>Scrolling FB, IG, Pinterest, YT</li>
+            <li>Gossiping with Loved Ones</li>
         </ul>
     </div>
 
-    <div class="family-container">
-        <div class="edu-title-line"></div>
-        <h3 class="family">
-            My family consists of my mother, father, and me.
-        </h3>
+    <!-- Family -->
+    <div class="info-card">
+        <div class="card-icon">Family</div>
+        <h3>Family</h3>
+        <p class="family-text">My family consists of my mother, father, and me.</p>
     </div>
 </div>
 
-<div id="Languages" class="Languages-and-Frameworks content-section">
+<section class="Languages-and-Frameworks content-section">
     <div class="languages-container">
         <div class="header">
-            <h1 class="LanguagesTitle"> Languages And Frameworks</h1> <br>
-            <p class="language-para"> Not a pro yet! but, Every single day I'm diving deeper,
-                refining my skills to reach professional mastery! </p>
+            <h1>Languages & Frameworks</h1>
+            <p class="language-para">Technologies I use to build modern, scalable applications.</p>
         </div>
 
-        <div class="middle">
-            <div class="skills">
-                <h3> Java </h3>
-                <div class="poll"></div>
-                <h3> Python </h3>
-                <div class="poll"></div>
+        <div class="skills-grid">
+            <!-- Language Cards -->
+            <div class="skill-card" data-level="90">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+                <div class="progress"><div style="width: 90%"></div></div>
             </div>
 
-            <div class="skills">
-                <h3> HTML </h3>
-                <div class="poll"></div>
-                <h3> SQL </h3>
-                <div class="poll"></div>
+            <div class="skill-card" data-level="85">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="progress"><div style="width: 85%"></div></div>
             </div>
-        </div>
 
-        <div class="ending">
-            <div class="images">
+            <div class="skill-card" data-level="80">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="progress"><div style="width: 80%"></div></div>
+            </div>
 
-                <div class="first-one">
-                    <img src="Assignment/assests/gitHub.png" alt="gh" class="gh-images lng-img" height="60px" width="100px">
-                </div>
-                <br> <br>
+            <div class="skill-card" data-level="75">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript</h3>
+                <div class="progress"><div style="width: 75%"></div></div>
+            </div>
 
-                <div class="second-2">
-                    <img src="Assignment/assests/ps.jpg" alt="PS" class="PS-images lng-img" height="60px" width="60px">
-                    <img src="Assignment/assests/sql.png" alt="SQL" class="SQL-images lng-img" height="60px" width="100px">
-                </div> <br> <br>
+            <!-- Framework Cards -->
+            <div class="skill-card" data-level="70">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
+                <div class="progress"><div style="width: 70%"></div></div>
+            </div>
 
-                <div class="third-3">
-                    <img src="Assignment/assests/Python.png" alt="python" class="python-images lng-img" height="60px" width="100px">
-                    <img src="Assignment/assests/C%23.png" alt="C#" class="C#-images lng-img" height="60px" width="60px">
-                    <img src="Assignment/assests/figma.png" alt="Figma" class="Figma-images lng-img" height="60px" width="60px">
-                </div> <br> <br>
+            <div class="skill-card" data-level="80">
+                <img src="https://spring.io/img/logos/spring.svg" alt="Spring" class="icon-img">
+                <h3>Spring Boot</h3>
+                <div class="progress"><div style="width: 80%"></div></div>
+            </div>
 
-                <div class="last-4">
-                    <img src="Assignment/assests/java.png" alt="Java" class="Java-images lng-img" height="60px" width="100px">
-                    <img src="Assignment/assests/css.png" alt="CSS" class="CSS-images lng-img" height="60px" width="60px">
-                    <img src="Assignment/assests/html.svg" alt="html" class="html-images lng-img" height="60px" width="60px">
-                    <img src="Assignment/assests/php.png" alt="php" class="php-images lng-img" height="60px" width="80px">
-                </div> <br> <br>
+            <div class="skill-card" data-level="65">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+                <div class="progress"><div style="width: 65%"></div></div>
+            </div>
+
+            <div class="skill-card" data-level="60">
+                <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" class="icon-img">
+                <h3>MySQL</h3>
+                <div class="progress"><div style="width: 60%"></div></div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!--ara project crd eka pitipsse shadow ekt zoom in zoom out dna seen ekai-->
 <!--assignment project wlta lnk dnn github-->
@@ -2176,45 +2036,73 @@
         <div class="service-header">
             <div class="service-title">
                 <div class="service-topic-line"></div>
-                <h2 id="My-Services"></h2>
+                <h2>My Services</h2>
             </div>
-
-            <p class="service-para"> Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
-                Consectetur culpa delectus est et
-                eveniet exercitationem harum hic impedit iure laborum, l
-                ibero necessitatibus nobis pariatur, placeat quas sapiente,
-                temporibus ullam voluptatem!</p>
+            <p class="service-para">
+                I deliver clean, modern, and user-focused digital solutions — from stunning UI/UX designs to responsive web applications.
+            </p>
         </div>
 
         <div class="service-cards">
-            <div class="first-card">
-                <img class="boxIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAEbklEQVR4Xu2czW7TQBCAvaE9QGnSOq+AgAMXuIBQJVTxJ/EQ3OAERyQQXCkXbnCCE68BggpUVeUCF5CAV2jqNoEWoao14xBDVNp4djy7s7Enp0jZ3bG/b2d3HXttIv2IEjCi0TV4pAKEO4EKUAHCBITDawaoAGECwuE1A1SAMAHh8JoBKkCYgHB4zQAVIExAOLxmgAoQJiAcXjNABQgTEA6vGaAChAkIh9cMUAHCBITDawbUXUCapke3ut3jUzMzH3yy2NzYOHOk1fpmjPnhM+7eWKIZAPCneknyOo2ik5ONxvzU7OxHHzA219dPb+/uLsLJf2nG8UWQsOkj7n4xxATk8OGgzmYHBhK6PiQMwW8NgLyXlCAiYC/8vGdkEg4ZMzcdx59c9MjvSXJqJ02X4KRz+HkYMQneBRwEfwh40jDmAreEDP5umr6FOPEBckUkeBWAgJ+zSczk5Plms/mVIxMQ8MUywZuAbLUDE+4rONNzGKgwMS7A2HwfU7aoTK/TWUiNuVdUbvD7MsS96mt15EWARc/vM4C54PlMu30TCQxVbGNt7Rmc7A1U4SjyNhw5FxAC/Bx6iBKcCggJfqgSnAkIEX6IEpwICBl+CQnzMDH/RM4h6GLsAsYBPlHCEqyOrnBLYBUwTvBDkcAmwBZ+ZMzTVhzfRueqw4KWqyPWTGARAPAPw0XWIjDq/7FW+AkIvnQmlBYwgP8STmSuEHxWIED4khJKCagS/FxCN0meRGl6C9WZoqj0cEQWUEX4EhJIAqoM37cEawF1gO9TgpWAOsH3JQEtoI7wfUhACagzfNcSCgXYwoebKY/hZsod5DJurIoRlqiX4L+jX6NOcqQAhf8/OhsJwO9Nq92+NkoCq4CQr3K5Us1GAMQsvFBjH4KqLIEbfv+fGUzPsB2KqijBBXy0gKxgnSW4gm8loK4SXMK3FlA3Ca7hkwTURYIP+GQBVZfgC34pAVWV4Pv+MGoZOmqpWqXVkW/4pTMgF2MrwcXDt5jrmVFlJOCzCaAMRyFJkILPKmBIAvrxlBAkSMJnFzCQ0N/5CN9RzwhJSpCG70TAuEgIAb4zAaFLCAW+UwGhSrCEn21VcvJYer4iK30dULT8s31o1+WcQIDvfBe9cwGhZEK303kB9ymuF3WYwe/V2aT392JtdXW612hk21RRqyOA9RAeX3+ABDayGGxTfQTbVO8i21qBYedypbapDl0xY5eorBu1e73eiXR7exmO46Bd8vkheuv53uaAvb0OMSfoqwqQqUoupi/r+IfOyyS8nyl9Xc0fKmIChldHIi9s2tl5BxPtZ8l3BYkL6EuA1dHWxMQxX2/LyrNRX1lGnkGqVVF0CKoWStrZqAAaN7ZaKoANJa0hFUDjxlZLBbChpDWkAmjc2GqpADaUtIZUAI0bWy0VwIaS1pAKoHFjq6UC2FDSGlIBNG5stVQAG0paQyqAxo2tlgpgQ0lrSAXQuLHVUgFsKGkNqQAaN7ZaKoANJa0hFUDjxlZLBbChpDX0G9g1NY6F1uttAAAAAElFTkSuQmCC"/>
-                <h4 class="uxDesign">UI/UX Designing</h4>
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Crafting intuitive and visually appealing interfaces with Figma and Adobe XD.</p>
             </div>
 
-            <div class="first-card">
-                <img class="boxIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAEbklEQVR4Xu2czW7TQBCAvaE9QGnSOq+AgAMXuIBQJVTxJ/EQ3OAERyQQXCkXbnCCE68BggpUVeUCF5CAV2jqNoEWoao14xBDVNp4djy7s7Enp0jZ3bG/b2d3HXttIv2IEjCi0TV4pAKEO4EKUAHCBITDawaoAGECwuE1A1SAMAHh8JoBKkCYgHB4zQAVIExAOLxmgAoQJiAcXjNABQgTEA6vGaAChAkIh9cMUAHCBITDawbUXUCapke3ut3jUzMzH3yy2NzYOHOk1fpmjPnhM+7eWKIZAPCneknyOo2ik5ONxvzU7OxHHzA219dPb+/uLsLJf2nG8UWQsOkj7n4xxATk8OGgzmYHBhK6PiQMwW8NgLyXlCAiYC/8vGdkEg4ZMzcdx59c9MjvSXJqJ02X4KRz+HkYMQneBRwEfwh40jDmAreEDP5umr6FOPEBckUkeBWAgJ+zSczk5Plms/mVIxMQ8MUywZuAbLUDE+4rONNzGKgwMS7A2HwfU7aoTK/TWUiNuVdUbvD7MsS96mt15EWARc/vM4C54PlMu30TCQxVbGNt7Rmc7A1U4SjyNhw5FxAC/Bx6iBKcCggJfqgSnAkIEX6IEpwICBl+CQnzMDH/RM4h6GLsAsYBPlHCEqyOrnBLYBUwTvBDkcAmwBZ+ZMzTVhzfRueqw4KWqyPWTGARAPAPw0XWIjDq/7FW+AkIvnQmlBYwgP8STmSuEHxWIED4khJKCagS/FxCN0meRGl6C9WZoqj0cEQWUEX4EhJIAqoM37cEawF1gO9TgpWAOsH3JQEtoI7wfUhACagzfNcSCgXYwoebKY/hZsod5DJurIoRlqiX4L+jX6NOcqQAhf8/OhsJwO9Nq92+NkoCq4CQr3K5Us1GAMQsvFBjH4KqLIEbfv+fGUzPsB2KqijBBXy0gKxgnSW4gm8loK4SXMK3FlA3Ca7hkwTURYIP+GQBVZfgC34pAVWV4Pv+MGoZOmqpWqXVkW/4pTMgF2MrwcXDt5jrmVFlJOCzCaAMRyFJkILPKmBIAvrxlBAkSMJnFzCQ0N/5CN9RzwhJSpCG70TAuEgIAb4zAaFLCAW+UwGhSrCEn21VcvJYer4iK30dULT8s31o1+WcQIDvfBe9cwGhZEK303kB9ymuF3WYwe/V2aT392JtdXW612hk21RRqyOA9RAeX3+ABDayGGxTfQTbVO8i21qBYedypbapDl0xY5eorBu1e73eiXR7exmO46Bd8vkheuv53uaAvb0OMSfoqwqQqUoupi/r+IfOyyS8nyl9Xc0fKmIChldHIi9s2tl5BxPtZ8l3BYkL6EuA1dHWxMQxX2/LyrNRX1lGnkGqVVF0CKoWStrZqAAaN7ZaKoANJa0hFUDjxlZLBbChpDWkAmjc2GqpADaUtIZUAI0bWy0VwIaS1pAKoHFjq6UC2FDSGlIBNG5stVQAG0paQyqAxo2tlgpgQ0lrSAXQuLHVUgFsKGkNqQAaN7ZaKoANJa0hFUDjxlZLBbChpDX0G9g1NY6F1uttAAAAAElFTkSuQmCC"/>
-                <h4 class="uxDesign">UI/UX Designing</h4>
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Building fast, responsive websites using HTML, CSS, JavaScript, and React.</p>
             </div>
 
-            <div class="first-card">
-                <img class="boxIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAEbklEQVR4Xu2czW7TQBCAvaE9QGnSOq+AgAMXuIBQJVTxJ/EQ3OAERyQQXCkXbnCCE68BggpUVeUCF5CAV2jqNoEWoao14xBDVNp4djy7s7Enp0jZ3bG/b2d3HXttIv2IEjCi0TV4pAKEO4EKUAHCBITDawaoAGECwuE1A1SAMAHh8JoBKkCYgHB4zQAVIExAOLxmgAoQJiAcXjNABQgTEA6vGaAChAkIh9cMUAHCBITDawbUXUCapke3ut3jUzMzH3yy2NzYOHOk1fpmjPnhM+7eWKIZAPCneknyOo2ik5ONxvzU7OxHHzA219dPb+/uLsLJf2nG8UWQsOkj7n4xxATk8OGgzmYHBhK6PiQMwW8NgLyXlCAiYC/8vGdkEg4ZMzcdx59c9MjvSXJqJ02X4KRz+HkYMQneBRwEfwh40jDmAreEDP5umr6FOPEBckUkeBWAgJ+zSczk5Plms/mVIxMQ8MUywZuAbLUDE+4rONNzGKgwMS7A2HwfU7aoTK/TWUiNuVdUbvD7MsS96mt15EWARc/vM4C54PlMu30TCQxVbGNt7Rmc7A1U4SjyNhw5FxAC/Bx6iBKcCggJfqgSnAkIEX6IEpwICBl+CQnzMDH/RM4h6GLsAsYBPlHCEqyOrnBLYBUwTvBDkcAmwBZ+ZMzTVhzfRueqw4KWqyPWTGARAPAPw0XWIjDq/7FW+AkIvnQmlBYwgP8STmSuEHxWIED4khJKCagS/FxCN0meRGl6C9WZoqj0cEQWUEX4EhJIAqoM37cEawF1gO9TgpWAOsH3JQEtoI7wfUhACagzfNcSCgXYwoebKY/hZsod5DJurIoRlqiX4L+jX6NOcqQAhf8/OhsJwO9Nq92+NkoCq4CQr3K5Us1GAMQsvFBjH4KqLIEbfv+fGUzPsB2KqijBBXy0gKxgnSW4gm8loK4SXMK3FlA3Ca7hkwTURYIP+GQBVZfgC34pAVWV4Pv+MGoZOmqpWqXVkW/4pTMgF2MrwcXDt5jrmVFlJOCzCaAMRyFJkILPKmBIAvrxlBAkSMJnFzCQ0N/5CN9RzwhJSpCG70TAuEgIAb4zAaFLCAW+UwGhSrCEn21VcvJYer4iK30dULT8s31o1+WcQIDvfBe9cwGhZEK303kB9ymuF3WYwe/V2aT392JtdXW612hk21RRqyOA9RAeX3+ABDayGGxTfQTbVO8i21qBYedypbapDl0xY5eorBu1e73eiXR7exmO46Bd8vkheuv53uaAvb0OMSfoqwqQqUoupi/r+IfOyyS8nyl9Xc0fKmIChldHIi9s2tl5BxPtZ8l3BYkL6EuA1dHWxMQxX2/LyrNRX1lGnkGqVVF0CKoWStrZqAAaN7ZaKoANJa0hFUDjxlZLBbChpDWkAmjc2GqpADaUtIZUAI0bWy0VwIaS1pAKoHFjq6UC2FDSGlIBNG5stVQAG0paQyqAxo2tlgpgQ0lrSAXQuLHVUgFsKGkNqQAaN7ZaKoANJa0hFUDjxlZLBbChpDX0G9g1NY6F1uttAAAAAElFTkSuQmCC"/>
-                <h4 class="uxDesign">UI/UX Designing</h4>
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Creating secure APIs and scalable systems with Spring Boot and Node.js.</p>
             </div>
 
-            <div class="first-card">
-                <img class="boxIcon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAEbklEQVR4Xu2czW7TQBCAvaE9QGnSOq+AgAMXuIBQJVTxJ/EQ3OAERyQQXCkXbnCCE68BggpUVeUCF5CAV2jqNoEWoao14xBDVNp4djy7s7Enp0jZ3bG/b2d3HXttIv2IEjCi0TV4pAKEO4EKUAHCBITDawaoAGECwuE1A1SAMAHh8JoBKkCYgHB4zQAVIExAOLxmgAoQJiAcXjNABQgTEA6vGaAChAkIh9cMUAHCBITDawbUXUCapke3ut3jUzMzH3yy2NzYOHOk1fpmjPnhM+7eWKIZAPCneknyOo2ik5ONxvzU7OxHHzA219dPb+/uLsLJf2nG8UWQsOkj7n4xxATk8OGgzmYHBhK6PiQMwW8NgLyXlCAiYC/8vGdkEg4ZMzcdx59c9MjvSXJqJ02X4KRz+HkYMQneBRwEfwh40jDmAreEDP5umr6FOPEBckUkeBWAgJ+zSczk5Plms/mVIxMQ8MUywZuAbLUDE+4rONNzGKgwMS7A2HwfU7aoTK/TWUiNuVdUbvD7MsS96mt15EWARc/vM4C54PlMu30TCQxVbGNt7Rmc7A1U4SjyNhw5FxAC/Bx6iBKcCggJfqgSnAkIEX6IEpwICBl+CQnzMDH/RM4h6GLsAsYBPlHCEqyOrnBLYBUwTvBDkcAmwBZ+ZMzTVhzfRueqw4KWqyPWTGARAPAPw0XWIjDq/7FW+AkIvnQmlBYwgP8STmSuEHxWIED4khJKCagS/FxCN0meRGl6C9WZoqj0cEQWUEX4EhJIAqoM37cEawF1gO9TgpWAOsH3JQEtoI7wfUhACagzfNcSCgXYwoebKY/hZsod5DJurIoRlqiX4L+jX6NOcqQAhf8/OhsJwO9Nq92+NkoCq4CQr3K5Us1GAMQsvFBjH4KqLIEbfv+fGUzPsB2KqijBBXy0gKxgnSW4gm8loK4SXMK3FlA3Ca7hkwTURYIP+GQBVZfgC34pAVWV4Pv+MGoZOmqpWqXVkW/4pTMgF2MrwcXDt5jrmVFlJOCzCaAMRyFJkILPKmBIAvrxlBAkSMJnFzCQ0N/5CN9RzwhJSpCG70TAuEgIAb4zAaFLCAW+UwGhSrCEn21VcvJYer4iK30dULT8s31o1+WcQIDvfBe9cwGhZEK303kB9ymuF3WYwe/V2aT392JtdXW612hk21RRqyOA9RAeX3+ABDayGGxTfQTbVO8i21qBYedypbapDl0xY5eorBu1e73eiXR7exmO46Bd8vkheuv53uaAvb0OMSfoqwqQqUoupi/r+IfOyyS8nyl9Xc0fKmIChldHIi9s2tl5BxPtZ8l3BYkL6EuA1dHWxMQxX2/LyrNRX1lGnkGqVVF0CKoWStrZqAAaN7ZaKoANJa0hFUDjxlZLBbChpDWkAmjc2GqpADaUtIZUAI0bWy0VwIaS1pAKoHFjq6UC2FDSGlIBNG5stVQAG0paQyqAxo2tlgpgQ0lrSAXQuLHVUgFsKGkNqQAaN7ZaKoANJa0hFUDjxlZLBbChpDX0G9g1NY6F1uttAAAAAElFTkSuQmCC"/>
-                <h4 class="uxDesign">UI/UX Designing</h4>
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring flawless experience across all devices — mobile, tablet, desktop.</p>
             </div>
 
+            <!-- Service Card 5 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring flawless experience across all devices — mobile, tablet, desktop.</p>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring flawless experience across all devices — mobile, tablet, desktop.</p>
+            </div>
         </div>
+
         <div class="service-btn">
-            <button class="cv-btn-2"> Download CV! </button>
-            <button class="cv-btn-2"> Hire Me! </button>
+            <button class="cv-btn">Download CV</button>
+            <button class="hire-btn">Hire Me</button>
         </div>
-
-
     </div>
 </section>
 
@@ -2257,7 +2145,7 @@
                     <div class="project-card">
 
                         <div class="assignment-card" onclick="showCardPopup()">
-                            <img src="/Assignment/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
+                            <img src="Assignment/assests/supermarket.jpeg" alt="AandCSuperMarket Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">AandC SuperMarket</h3>
                                 <p class="project-description">Step into the Digital Aisles: Discover
@@ -2280,7 +2168,7 @@
                     <!-- Project 2 -->
                     <div id="project-card" class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_ii()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Layered Architecture</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2301,7 +2189,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_iii()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">ORM</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2323,7 +2211,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_iv()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">ORM Assignment 02</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2345,7 +2233,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_v()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-02</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2367,7 +2255,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_vi()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-04</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2389,7 +2277,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_vii()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Internet Technology Assign-06</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2411,7 +2299,7 @@
 
                     <div class="project-card">
                         <div class="assignment-card" onclick="showCardPopup_viii()">
-                            <img src="/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
+                            <img src="Assignment/assests/game.jpeg" alt="Connect 4 Games Project Image" class="project-img">
                             <div class="project-content">
                                 <h3 class="project-title">Port Folio</h3>
                                 <p class="project-description">Play and Enjoy: Dive into Connect4Games
@@ -2439,26 +2327,40 @@
 
 <section id="getInTouch" class="getInTouch content-section">
     <div class="git-container">
+        <!-- 3D Globe -->
+        <div class="globe-container">
+            <div class="globe">
+                <div class="globe-inner"></div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
         <div class="git-form">
             <h1>Get In Touch</h1>
             <p>Fill this to send your message</p>
             <form>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" placeholder="What's your name?">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
 
-                <label for="email">Your Email</label>
-                <input type="email" id="email" placeholder="Add your email!">
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
 
-                <label for="message">Your Message</label>
-                <textarea id="message" placeholder="What do you want to say?"></textarea>
+                <div class="input-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
 
-                <button type="submit">Send</button>
+                <button type="submit" class="send-btn">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
             </form>
         </div>
     </div>
-
-<!--    <img src="" alt="digital earth ekk karkena video ekk!!">-->
-
 </section>
 
 <footer id="footer" class="content-section">
