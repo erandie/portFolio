@@ -50,6 +50,7 @@
         .logo {
             display: flex;
             align-items: center;
+            gap: 12px;
         }
 
         .font{
@@ -59,21 +60,31 @@
 
         .fonts{
             font-weight: normal;
-            color: red;
+            /*color: red;*/
         }
 
         .logo img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            margin-right: 10px;
-            margin-left: 10px;
+            object-fit: cover;
+            border: 2px solid #3c3cbf;
+            box-shadow: 0 0 15px rgba(60, 60, 191, 0.4);
         }
 
         .logo span {
-            color: lightgrey;
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 800;
+            color: #8b8b8b;
+            text-shadow: 0 0 10px rgba(60, 60, 191, 0.5);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        logo:hover span {
+            color: #5e5eff;
+            text-shadow: 0 0 20px rgba(94, 94, 255, 0.7);
+            transform: scale(1.05);
         }
 
         .navbar a {
@@ -146,297 +157,162 @@
             }
         }
 
-        /*__________________________Intro Section_____________________________*/
-
+        /* === INTRO SECTION - CLEAN & RESPONSIVE === */
         .intro {
             display: flex;
-            /*justify-content: space-between;*/
             align-items: center;
-            padding: 200px 100px;
+            justify-content: space-between;
+            padding: 120px 80px;
+            min-height: 100vh;
             background: linear-gradient(100deg, rgba(7, 7, 7, 0.7), rgba(18, 18, 18, 0.7));
-            height: auto;
+            gap: 2rem;
         }
 
         .intro-text {
-            margin-left: 80px;
             max-width: 500px;
+            z-index: 2;
         }
 
         .intro-text h1 {
             font-size: 50px;
             color: #3b82f6;
-            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
-        }
-
-        #typing {
-            position: relative;
-            text-align: center;
-            margin-left: 600px;
-            color: #3b82f6;
-            font-size: 60px;
-            font-weight: bold;
-            z-index: 1000;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            margin-bottom: 1rem;
         }
 
         #full-stack-dev {
             font-size: 45px;
             margin: 10px 0;
-            width: 500px;
+            color: #3c3cbf;
         }
 
         .intro-text p {
             margin: 20px 0;
+            font-size: 1.1rem;
+            color: #ddd;
         }
 
-        .intro-text .cv-btn {
-            padding: 10px 20px;
-            border: none;
-            background-color: gray;
+        .cv-btn {
+            padding: 12px 28px;
+            background: #3c3cbf;
             color: white;
+            border: none;
+            border-radius: 8px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 5px 5px rgba(153, 152, 153, 0.4);
-            margin-top: 10px;
-            transition: transform 0.5s ease-in-out ,box-shadow 0.4s ease-in-out;
+            box-shadow: 0 5px 15px rgba(60, 60, 191, 0.3);
+            transition: all 0.3s ease;
         }
 
-        .cv-btn:hover{
-            transform: scale(1.15);
-            /*box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 15px 2px;;*/
+        .cv-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(60, 60, 191, 0.4);
         }
 
-        /*.intro-images {*/
-        /*    width: 25vw;*/
-        /*    border-radius: 3rem;*/
-        /*    animation: Aimage 4s ease-in-out infinite;*/
-        /*    transition: 0.4s ease;*/
+        /* === PROFILE IMAGE - RIGHT SIDE === */
+        .intro-images {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
 
-        /*}*/
+        .image-gallery {
+            display: flex;
+            gap: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-img {
+            width: 380px;
+            height: 400px;
+            max-width: 90vw;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-img:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(60, 60, 191, 0.3);
+            border: 3px solid #3c3cbf;
+        }
 
         .profile-image:hover {
-            transform: scale(0.9); /* Scale effect on hover */
-            box-shadow: rgba(122, 176, 245, 0.3) 20px 20px 150px 2px;
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(60, 60, 191, 0.3);
         }
 
-        .profile-image {
-            position: absolute;
-            border-radius: 10px;
-            transition: transform 0.50s ease-in-out, box-shadow 0.4s ease-in-out;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
 
-        .intro-images .image img {
-            margin-top: 100px;
-            margin-left: 300px;
-            width: 24vw;
-            height: 38vw;
-            border-radius: 1rem;
-            animation: moving 4s ease-in-out infinite;
-            transition: 0.4s ease;
-
-        }
-
-        @keyframes moving {
-            0% {
-                transform: translateX(0);
-            }
-
-            50% {
-                transform: translateX(-2.4rem);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        @media screen and (min-width: 1440px) {
-            .intro-text{
-                padding-left: 50px;
-                width: 500px;
-            }
-
-            /*.intro-images .image {*/
-            /*    margin-top: 40px;*/
-            /*}*/
-
-            /*.intro-images{*/
-            /*    margin-left: 100px;*/
-            /*}*/
-
-        }
-
-
-        @media  screen and (min-width: 1024px) {
-            .intro{
-                padding-left: 80px;
-                padding-top: 100px;
-                background-color: #1c1c1c;
-            }
-        }
-
-        @media  screen and (max-width: 1024px) {
-            .intro{
-                padding-left: 80px;
-                padding-top: 200px;
-                background-color: #181818;
+        /* === RESPONSIVE === */
+        @media (max-width: 1024px) {
+            .intro {
                 flex-direction: column;
+                text-align: center;
+                padding: 140px 40px;
             }
-
-            .intro-images .image img{
-                margin-top: 4rem;
-                align-content: center;
+            .intro-text {
+                max-width: 100%;
             }
-
+            .profile-image {
+                width: 320px;
+                height: 320px;
+                margin-top: 2rem;
+            }
+            .image-gallery {
+                gap: 15px;
+            }
+            .gallery-img {
+                width: 150px;
+                height: 150px;
+            }
         }
 
         @media (max-width: 768px) {
-
             .intro {
-                background-color: #350008;
-                /*flex-direction: column;*/
-                padding-top: 100px;
-                padding-left: 50px;
-                padding-bottom: 20px;
-                font-size: medium;
+                padding: 120px 20px;
+                background: #350008;
             }
-
-            .intro-text{
-                padding-top: 50px;
+            .intro-text h1 {
+                font-size: 42px;
             }
-
-            /*#home{*/
-            /*    display: block;*/
-            /*}*/
-
-            .intro-text h1, .intro-text h2 {
-                font-size: 40px;
+            #full-stack-dev {
+                font-size: 36px;
             }
-
-            .intro-images .image img {
-                /*width: 40vw;*/
-                margin: 4rem;
+            .profile-image {
+                width: 280px;
+                height: 280px;
             }
-
-
-            .content-section {
-                padding-top: 120px;
+            .intro-images {
+                order: -1; /* Show images above text on mobile */
+                margin-bottom: 2rem;
             }
-
+            .image-gallery {
+                gap: 12px;
+            }
+            .gallery-img {
+                width: 120px;
+                height: 120px;
+            }
         }
 
-        /*@media screen and (min-width: 769px) {*/
-        /*    .nav-links {*/
-        /*        display: flex !important; !* Ensure the menu is always visible on larger screens *!*/
-        /*    }*/
-        /*}*/
-
-        /* Responsive Styles */
         @media (max-width: 425px) {
-            .intro {
-                background-color: #350008;
-                flex-direction: column;
-                padding-top: 100px;
-                padding-left: 50px;
-                padding-bottom: 20px;
+            .intro-text h1 { font-size: 38px; }
+            #full-stack-dev { font-size: 32px; }
+            .profile-image { width: 250px; height: 250px; }
+            .gallery-img {
+                width: 100px;
+                height: 100px;
             }
-
-            .intro-text{
-                width: 120%;
-            }
-
-            .intro-text h1, .intro-text h2 {
-                font-size: 40px;
-            }
-
-            .full-stack-dev{
-                font-size: 30px;
-                color: #c63636;
-            }
-
-            /*.intro-images {*/
-            /*    flex-direction: column;*/
-            /*    align-items: center;*/
-            /*}*/
-
-            .intro-images .image:nth-child(3){
-                display: none;
-            }
-
         }
-
-        @media (max-width: 375px) {
-            .intro {
-                background-color: #350008;
-                flex-direction: column;
-                padding-top: 100px;
-                padding-left: 50px;
-                padding-bottom: 20px;
-            }
-
-            .intro-text h1, .intro-text h2 {
-                font-size: 40px;
-            }
-
-            .full-stack-dev{
-                font-size: 30px;
-                color: #c63636;
-            }
-
-            .intro-images {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .intro-images .image {
-                margin-right: 180px;
-            }
-
-            .intro-images .image:nth-child(3){
-                display: none;
-                width: 200px;
-            }
-
-        }
-
-        @media (max-width: 320px) {
-            .intro {
-                background-color: #350008;
-                flex-direction: column;
-                padding-top: 100px;
-                padding-left: 50px;
-                padding-bottom: 20px;
-            }
-
-            .intro-text h1, .intro-text h2 {
-                font-size: 40px;
-            }
-
-            .full-stack-dev{
-                font-size: 30px;
-                color: #c63636;
-            }
-
-            .intro-images {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .intro-images .image {
-                margin-right: 240px;
-            }
-
-            .intro-images .image:nth-child(3){
-                display: none;
-                width: 200px;
-            }
-
-        }
-
-        section{
-            clear: both;
-        }
-
 
         /*_______________________Introduction Section______________________________ */
 
@@ -2029,47 +1905,40 @@
 <header class="headerr font">
     <nav>
         <div class="logo">
-            <img src="/assests/WhatsApp%20Image%202024-07-23%20at%204.53.55%20PM.jpeg" alt="Logo">
-            <span class="fonts">Erandi Gamage</span>
+            <img src="/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Logo">
+            <span class="fonts">Erandie</span>
         </div>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
-        <nav class="navbar">
+        <div class="navbar"> <!-- Changed from <nav> to <div> -->
             <a href="#home" class="">Home</a>
             <a href="#about-me!" class="">About Me</a>
             <a href="#Languages" class="">Languages</a>
             <a href="#projects" class="">Projects</a>
             <a href="#assignments" class="">Assignment</a>
             <a href="#getInTouch" class="">Contact</a>
-        </nav>
+        </div>
     </nav>
 </header>
 
 
-<section id="home" class="intro content-section" >
+<section id="home" class="intro content-section">
     <div class="intro-text">
-        <div class="image">
-            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">
-            <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev"></span></h2>
-            <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
-            <button class="cv-btn">Download CV</button>
-        </div>
-        <!--        <h1 id="typing"></h1>-->
-
-        <!--        <h1 class="hi-its-me">Hi, It's Me</h1>-->
         <h1 id="typing" class="erandi-gamage">Erandi Gamage</h1>
-
+        <h2 class="full-stack-dev" id="full-stack-dev"><span class="full-stack-dev"></span></h2>
+        <p class="passionated...">A passionate software engineering student, dedicated to crafting innovative solutions and honing my skills.</p>
+        <button class="cv-btn">Download CV</button>
     </div>
-    <section class="intro-images">
 
-        <!--        <div class="image">-->
-        <!--            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">-->
-        <!--        </div>-->
-        <!--        <div class="image">-->
-        <!--            <img src="Assignment/assests/WhatsApp Image 2024-07-23 at 4.53.55 PM.jpeg" alt="Profile Picture" class="profile-image">-->
-        <!--        </div>-->
-    </section>
+    <!-- Move image here -->
+    <div class="intro-images">
+        <div class="image-gallery">
+            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 1" class="gallery-img">
+            <img src="Assignment/assests/Gemini_Generated_Image_7b5dq47b5dq47b5d.png" alt="Erandi 2" class="gallery-img">
+<!--            <img src="Assignment/assests/Gemini_Generated_Image_tmtzhhtmtzhhtmtz.png" alt="Erandi 3" class="gallery-img">-->
+        </div>
+    </div>
 </section>
 
 <!--section for laptop-->
